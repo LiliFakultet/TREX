@@ -3,7 +3,7 @@
 	<name>standalone_bsp_0</name>
 	<comment></comment>
 	<projects>
-		<project>LPRS2_Space_Invaders_FSL_hw_platform</project>
+		<project>LPRS2_Asteroids_game_hw_platform</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
