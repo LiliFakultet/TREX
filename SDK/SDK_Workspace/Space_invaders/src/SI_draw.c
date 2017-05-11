@@ -295,19 +295,34 @@ void draw_ship(Xuint32 BaseAddress, Xuint8 x_crdnt, Xuint8 y_crdnt)
 			i = j*(640/8) + k;
 			if (j >= (2 + 32*y_crdnt) && j < (6 + 32*y_crdnt)) {
 				//PUT_TO_FSL((i-1), 0x00000000);
-				PUT_TO_FSL((i+0), 0x22200222);
+				PUT_TO_FSL((i+0), 0x00022000);
 				//PUT_TO_FSL((i+1), 0x00000000);
 			}
-			else if (j >= (6 + 32*y_crdnt) && j < (12 + 32*y_crdnt)) {
+			else if (j >= (6 + 32*y_crdnt) && j < (10 + 32*y_crdnt)) {
 				//PUT_TO_FSL((i-1), 0x01111110);
-				PUT_TO_FSL((i+0), 0x24200242);
+				PUT_TO_FSL((i+0), 0x02222220);
 				//PUT_TO_FSL((i+1), 0x00000000);
 			}
-			else if (j >= (12 + 32*y_crdnt) && j < (16 + 32*y_crdnt)) {
-				PUT_TO_FSL((i-1), 0x22222222);
+			else if (j >= (10 + 32*y_crdnt) && j < (14 + 32*y_crdnt)) {
+							PUT_TO_FSL((i-1), 0x00000022);
+							PUT_TO_FSL((i+0), 0x22222222);
+							PUT_TO_FSL((i+1), 0x22000000);
+						}
+			else if (j >= (14 + 32*y_crdnt) && j < (18 + 32*y_crdnt)) {
+				PUT_TO_FSL((i-1), 0x00002222);
 				PUT_TO_FSL((i+0), 0x33333333);
-				PUT_TO_FSL((i+1), 0x22222222);
+				PUT_TO_FSL((i+1), 0x22220000);
 			}
+			else if (j >= (18 + 32*y_crdnt) && j < (22 + 32*y_crdnt)) {
+							PUT_TO_FSL((i-1), 0x00222222);
+							PUT_TO_FSL((i+0), 0x33333333);
+							PUT_TO_FSL((i+1), 0x22222200);
+						}
+			else if (j >= (22 + 32*y_crdnt) && j < (24 + 32*y_crdnt)) {
+										PUT_TO_FSL((i-1), 0x02222222);
+										PUT_TO_FSL((i+0), 0x33333333);
+										PUT_TO_FSL((i+1), 0x22222220);
+									}
 			else {
 				PUT_TO_FSL((i-1), 0x22333333);
 				PUT_TO_FSL((i+0), 0x88833888);

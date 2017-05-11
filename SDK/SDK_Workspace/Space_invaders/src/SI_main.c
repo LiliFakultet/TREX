@@ -13,9 +13,9 @@
 void init_colors()
 {
 	/* Define colors */
-	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x10, 0x27104f);	//color 0
-	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x14, 0x90edac);	//color 1
-	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x18, 0xff0000);	//color 2
+	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x10, 0x000000);	//color 0
+	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x14, 0x808080);	//color 1
+	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x18, 0xffffff);	//color 2
 	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x1C, 0xa0a0a0);	//color 3 siva
 	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x20, 0x00ffff);	//color 4
 	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x24, 0xff00ff);	//color 5
@@ -156,13 +156,15 @@ void num_to_str(char *s, unsigned long bin, unsigned char n)
     }
 }
 
+
+
 int main()
 {
 	/*************************/
 	/* VARIABLES DECLARATION */
 	/*************************/
 
-	Xuint8 i, j, k1, k2, k3;
+	/*Xuint8 i, j, k1, k2, k3;
 	Xuint8 spaceship_dir;
 	Xuint8 invader_x;
 
@@ -170,14 +172,12 @@ int main()
 	Xuint8* invader_dir;
 	Xuint8* invader_dir_chng;
 
-	/* Temp variables */
+
 	int old_lives = 0, old_invaders_num = 0, old_level = -1;
 	int score = 0, old_score = 0;
 	char* str = NULL;
 
-    /************************/
-    /***** MAIN PROGRAM *****/
-    /************************/
+
 
 	init_platform();
 	init_interrupt_controller();
@@ -189,7 +189,7 @@ int main()
 	{
 		clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
 
-		/* Menu */
+
 		VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0b01);    //text mode
 
 		set_cursor(8115);
@@ -201,7 +201,7 @@ int main()
 			seed++;
 		}
 		srand(seed);
-		/********/
+
 
 		VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0b11);	//display and text mode
 		set_cursor(666);
@@ -397,6 +397,60 @@ int main()
 		num_to_str(str, score + old_score, num_len(score + old_score));
 		print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, str, num_len(score + old_score));
 
+	}*/
+
+	Xuint8 i, j;
+	char* str = NULL;
+	Xuint8 x_crdnt = 0, y_crdnt = 0;
+	Xuint8 k = x_crdnt;
+	Xuint8 game_over = 0;
+	Xuint8 spaceship_dir;
+
+	init_platform();
+	init_interrupt_controller();
+	init_colors();
+
+	clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+
+	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0b11);	//display and text mode
+	set_cursor(666);
+	clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+	print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, "SCORE", strlen("SCORE"));
+
+	set_cursor(688);
+	num_to_str(str, 0, num_len(0));
+	print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, str, strlen(str));
+
+	set_cursor(710);
+	print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, "LIVES", strlen("LIVES"));
+
+	set_cursor(732);
+	num_to_str(str, lives, num_len(lives));
+	print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, str, strlen(str));
+
+	set_cursor(751);
+	print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, "LEVEL", strlen("LEVEL"));
+
+	clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+
+	while(!game_over){
+
+		//clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+		draw_ship(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7);
+		switch(input)
+						{
+							case LEFT_JOY:
+									spaceship_dir = LEFT;
+									spaceship_speed = 4;
+									break;
+
+							case RIGHT_JOY:
+									spaceship_dir = RIGHT;
+									spaceship_speed = 4;
+									break;
+						}
+		//clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+		//move_spaceship(LEFT);
 	}
 
     return 0;
