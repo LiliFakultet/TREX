@@ -318,7 +318,7 @@ void draw_ship(Xuint32 BaseAddress, Xuint8 x_crdnt, Xuint8 y_crdnt)
 							PUT_TO_FSL((i+0), 0x33333333);
 							PUT_TO_FSL((i+1), 0x22222200);
 						}
-			else if (j >= (22 + 32*y_crdnt) && j < (24 + 32*y_crdnt)) {
+			else if (j >= (22 + 32*y_crdnt) && j < (26 + 32*y_crdnt)) {
 										PUT_TO_FSL((i-1), 0x02222222);
 										PUT_TO_FSL((i+0), 0x33333333);
 										PUT_TO_FSL((i+1), 0x22222220);
@@ -386,6 +386,54 @@ void draw_ship(Xuint32 BaseAddress, Xuint8 x_crdnt, Xuint8 y_crdnt)
 	}
 }
 
+void draw_asteroid(Xuint32 BaseAddress, Xuint8 x_crdnt, Xuint8 y_crdnt)
+{
+	int i, j, k;
+	k = x_crdnt;
+
+	if(lives > INIT_LIVES-1)
+	{
+		for (j = 2 + 32*y_crdnt; j < 28 + 32*y_crdnt; j++)
+		{
+			i = j*(640/8) + k;
+			if (j >= (2 + 32*y_crdnt) && j < (4 + 32*y_crdnt)) {
+				//PUT_TO_FSL((i-1), 0x00000000);
+				PUT_TO_FSL((i+0), 0x00022000);
+				//PUT_TO_FSL((i+1), 0x00000000);
+			}
+			else if (j >= (4 + 32*y_crdnt) && j < (6 + 32*y_crdnt)) {
+				//PUT_TO_FSL((i-1), 0x01111110);
+				PUT_TO_FSL((i+0), 0x00200200);
+				//PUT_TO_FSL((i+1), 0x00000000);
+			}
+			else if (j >= (6 + 32*y_crdnt) && j < (8 + 32*y_crdnt)) {
+							//PUT_TO_FSL((i-1), 0x00000000);
+							PUT_TO_FSL((i+0), 0x02000020);
+							//PUT_TO_FSL((i+1), 0x00000000);
+						}
+			else if (j >= (8 + 32*y_crdnt) && j < (10 + 32*y_crdnt)) {
+				PUT_TO_FSL((i-1), 0x00000002);
+				//PUT_TO_FSL((i+0), 0x00000000);
+				PUT_TO_FSL((i+1), 0x20000000);
+			}
+			else if (j >= (10 + 32*y_crdnt) && j < (12 + 32*y_crdnt)) {
+							PUT_TO_FSL((i-1), 0x00000020);
+							//PUT_TO_FSL((i+0), 0x33333333);
+							PUT_TO_FSL((i+1), 0x02000000);
+						}
+			else if (j >= (12 + 32*y_crdnt) && j < (14 + 32*y_crdnt)) {
+										PUT_TO_FSL((i-1), 0x00000200);
+										//PUT_TO_FSL((i+0), 0x33333333);
+										PUT_TO_FSL((i+1), 0x00200000);
+									}
+			else {
+				//PUT_TO_FSL((i-1), 0x22333333);
+				//PUT_TO_FSL((i+0), 0x88833888);
+				//PUT_TO_FSL((i+1), 0x33333322);
+			}
+		}
+	}
+}
 void draw_projectile(Xuint32 BaseAddress, Xuint8 x_crdnt, Xuint8 y_crdnt)
 {
 	int j, k;

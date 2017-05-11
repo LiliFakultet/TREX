@@ -437,6 +437,7 @@ int main()
 
 		//clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
 		draw_ship(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7);
+		draw_asteroid(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-4);
 		switch(input)
 						{
 							case LEFT_JOY:
