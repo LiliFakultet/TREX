@@ -41,6 +41,9 @@ extern Xuint8 invaders_num;
 extern Xuint8 projectiles_of_ship_num[MAX_PROJECTILES_X];	//Number of projectiles in column
 extern Xuint8 projectiles_of_invaders_num[MAX_PROJECTILES_X];
 extern Xuint8 projectiles_map[MAX_PROJECTILES_X][MAX_PROJECTILES_Y];
+
+
+
 /****************************/
 
 extern Xuint32 cursor_position;

@@ -27,6 +27,8 @@ void shoot_projectile_from_ship(Xuint8);
 void shoot_projectile_from_invader(Xuint8, Xuint8*);
 void generate_init_invaders_positions();
 
+
+
 /*
  * generate_field , generate_player , fire_shot , destroy_asteriod , destroy_player , get_player_angle
  *

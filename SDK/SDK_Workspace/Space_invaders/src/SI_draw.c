@@ -7,6 +7,22 @@
 
 #include "SI_draw.h"
 
+void draw_bitmap(Xuint32 BaseAddress, Xuint8 x_crdnt,Xuint8 y_crdnt, Xuint32 bitmap[ROW][COL])
+
+{
+	int i, j, k, index;
+	k = x_crdnt;
+	i = BaseAddress ;//Buni mi se komajler
+	for(index = 0; index < 25; index++)
+		for (j = index + 2 + 32*y_crdnt; j < index + 3 + 32*y_crdnt; j++)
+		{
+			i = j*(640/8) + k;
+			PUT_TO_FSL((i-1), bitmap[index][0]);
+			PUT_TO_FSL((i+0), bitmap[index][1]);
+			PUT_TO_FSL((i+1), bitmap[index][2]);
+		}
+}
+
 void draw_square(Xuint32 BaseAddress, Xuint8 x_crdnt, Xuint8 y_crdnt)
 {
 	int j, k;
