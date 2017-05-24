@@ -94,7 +94,7 @@ Xuint32 asteroid_t3[26][3]=
  {0x00000000, 0x00000000, 0x00000000},
  {0x00000000, 0x00000000, 0x00000000}
 };
-unsigned player_state8[26][3]=
+unsigned player_state1[26][3]=
 {
 {0x00000000,0x00022000,0x00000000},
 {0x00000000,0x00022000,0x00000000},
@@ -123,7 +123,7 @@ unsigned player_state8[26][3]=
 {0x20000000,0x00000000,0x00000002}
 };
 
-unsigned player_state7[26][3]=
+unsigned player_state5[26][3]=
 {
 {0x20000000,0x00000000,0x00000002},
 {0x22000000,0x00000000,0x00000022},
@@ -153,7 +153,7 @@ unsigned player_state7[26][3]=
 {0x00000000,0x00022000,0x00000000}
 };
 
-unsigned player_state6[26][3]=
+unsigned player_state2[26][3]=
 {
 {0x00000000,0x00000000,0x00000002},
 {0x00000000,0x00000000,0x00000022},
@@ -183,7 +183,7 @@ unsigned player_state6[26][3]=
 {0x00000000,0x20000000,0x00000000}
 };
 
-unsigned player_state5[26][3]=
+unsigned player_state6[26][3]=
 {
 {0x00000000,0x00000002,0x00000000},
 {0x00000000,0x00000002,0x00000000},
@@ -212,7 +212,7 @@ unsigned player_state5[26][3]=
 {0x22000000,0x00000000,0x00000000},
 {0x20000000,0x00000000,0x00000000}
 };
-unsigned player_state4[26][3]=
+unsigned player_state3[26][3]=
 {
 {0x22000000,0x00000000,0x00000000},
 {0x02200000,0x00000000,0x00000000},
@@ -241,7 +241,7 @@ unsigned player_state4[26][3]=
 {0x02200000,0x00000000,0x00000000},
 {0x22000000,0x00000000,0x00000000}
 };
-unsigned player_state3[26][3]=
+unsigned player_state7[26][3]=
 {
 {0x00000000,0x00000000,0x00000022},
 {0x00000000,0x00000000,0x00000220},
@@ -270,7 +270,7 @@ unsigned player_state3[26][3]=
 {0x00000000,0x00000000,0x00000220},
 {0x00000000,0x00000000,0x00000022}
 };
-unsigned player_state2[26][3]=
+unsigned player_state4[26][3]=
 {
 {0x00000000,0x20000000,0x00000000},
 {0x00000000,0x20000000,0x00000000},
@@ -299,7 +299,7 @@ unsigned player_state2[26][3]=
 {0x00000000,0x00000000,0x00000022},
 {0x00000000,0x00000000,0x00000002}
 };
-unsigned player_state1[26][3]=
+unsigned player_state8[26][3]=
 {
 {0x20000000,0x00000000,0x00000000},
 {0x02200000,0x00000000,0x00000000},
@@ -724,7 +724,8 @@ int main()
 	Xuint8 x_crdnt = 0, y_crdnt = 0;
 	Xuint8 k = x_crdnt;
 	Xuint8 game_over = 0;
-	Xuint8 spaceship_dir;
+	Xuint8 spaceship_dir , spaceshit_height = 0;
+	int current_state=0;
 
 	init_platform();
 	init_interrupt_controller();
@@ -766,47 +767,103 @@ int main()
 			switch(input)
 									{
 										case LEFT_JOY:
+											if(current_state == 0){
 												spaceship_dir++;
 												spaceship_speed = 4;
+												current_state = 1;
+											}
 												break;
 
 										case RIGHT_JOY:
+											if(current_state == 0){
 												spaceship_dir--;
 												spaceship_speed = 4;
+												current_state = 2;
+											}
+												break;
+
+										case DOWN_JOY:
+											if(current_state ==0){
+												spaceshit_height++;
+												current_state=3;
+												if(spaceshit_height>7){
+													spaceshit_height = -6;
+													erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y);
+												}else{
+													erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height -1);
+												}
+
+
+											}
+												break;
+										case UP_JOY:
+											if(current_state == 0){
+												spaceshit_height--;
+												current_state=4;
+												if(abs(spaceshit_height) > 7){
+													spaceshit_height = 0;
+													erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y);
+												}else{
+													erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height +1);
+												}
+
+											}
+											break;
+
+										default:
+												current_state = 0;
 												break;
 									}
 			switch(spaceship_dir%8) {
 			case 0:
-				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7, player_state1);
+				//memset(current_state , player_state1 , 26*3);
+				//erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height -1);
+				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height, player_state1);
 				break;
 			case 1:
-				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7, player_state2);
+				//memset(current_state , player_state2 , 26*3);
+				//erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height -1);
+				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height, player_state2);
 				break;
 			case 2:
-				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7, player_state3);
+				//memset(current_state , player_state3 , 26*3);
+				//erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height -1);
+				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height, player_state3);
 				break;
 			case 3:
-				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7, player_state4);
+				//memset(current_state , player_state4 , 26*3);
+				//erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height -1);
+				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height, player_state4);
 				break;
 			case 4:
-				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7, player_state5);
+				//memset(current_state , player_state5 , 26*3);
+				//erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height -1);
+				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height, player_state5);
 				break;
 			case 5:
-				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7, player_state6);
+				//memset(current_state , player_state1 , 26*3);
+				//erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height -1);
+				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height, player_state6);
 				break;
 			case 6:
-				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7, player_state7);
+				//memset(current_state , player_state1 , 26*3);
+				//erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height -1);
+				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height, player_state7);
 				break;
 			case 7:
-				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7, player_state8);
+				//memset(current_state , player_state1 , 26*3);
+
+				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height, player_state8);
 				break;
-
-
 			}
+			//clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+
+
+			//draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7 + spaceshit_height, player_state8);
 
 		}
-		//clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-		//move_spaceship(LEFT);
+		//
+		//move_spaceship(spaceship_dir);
 	}
 
     return 0;
