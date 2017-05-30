@@ -19,6 +19,19 @@ Xint8 ship_hit_projectile(int i)
 		return 0;
 }
 
+Xint8 ship_hit_asteroid(int i)
+{
+	if(projectiles_map[spaceship_x][i] == 2)
+	{
+		projectiles_map[i][SHIP_Y] = 0;
+		projectiles_of_invaders_num[i]--;
+		return 1;
+	}
+	else
+		return 0;
+}
+
+
 void move_spaceship(Xuint8 *dir)
 {
 	erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x, SHIP_Y);
