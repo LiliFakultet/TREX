@@ -98,6 +98,36 @@ Xuint32 border_horizontal_lower[26][3]=
 {0x22222222, 0x22222222, 0x22222222},
 {0x00000000, 0x00000000, 0x00000000} };
 
+
+Xuint32 home_base[26][3]=
+{{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000},
+{0x00000000, 0x00444400, 0x00000000} };
+
+
 Xuint32 border_upper_right[26][3]=
 {{0x22222222, 0x22222222, 0x22222222},
 {0x00000000, 0x00000000, 0x00000002},
@@ -675,9 +705,16 @@ void init_draw()
 						{
 							draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, j, i, border_vertical_right);
 						}
+			if(j == 39 && i >1 && i < 14)
+					{
+						draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, j, i, home_base);
+					}
+
 		}
+
+				}
 	}
-}
+
 
 void clear_text_screen(Xuint32 BaseAddress)
 {
@@ -1051,11 +1088,14 @@ int main()
 												spaceship_dir = 5;
 												current_state=3;
 												if(spaceship_height > 13){
-													spaceship_height = 1;
+													spaceship_height = 2;
 													erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119,SHIP_Y - 1);
+													draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y - 1, home_base);
 												}else{
 													erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, spaceship_height -1);
+													draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, spaceship_height - 1, home_base);
 												}
+
 
 
 											}
@@ -1065,11 +1105,13 @@ int main()
 												spaceship_height--;
 												spaceship_dir = 1;
 												current_state=4;
-												if(spaceship_height  < 1){
+												if(spaceship_height  < 2){
 													spaceship_height = 13;
-													erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, 1);
+													erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, 2);
+													draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, 2, home_base);
 												}else{
 													erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, spaceship_height +1);
+													draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, spaceship_height + 1, home_base);
 												}
 
 											}
