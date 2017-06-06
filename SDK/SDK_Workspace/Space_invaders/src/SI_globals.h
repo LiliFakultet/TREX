@@ -32,6 +32,14 @@ extern  Xuint8	spaceship_speed,
 		input;
 
 extern Xuint8 flag_row[INIT_ROWS];
+
+extern struct asteroids_info {
+	Xuint8 Y_coordinate,
+			X_coordinate,
+			asteroid_speed,
+			asteroid_direction,
+			id;
+};
 /****************************/
 
 /* main variables/maps */
