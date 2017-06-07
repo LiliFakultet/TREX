@@ -623,7 +623,7 @@ void init_colors()
 }
 
 void create_asteroids(){
-	int i;
+	int i,x;
 	max_asteroids_on_level = ASTEROID_INIT_COUNT * level * 3;
 	current_asteroid_on_field = 0;
 	max_asteroids_on_field = level * ASTEROID_INIT_COUNT;
@@ -636,9 +636,14 @@ void create_asteroids(){
 	}
 
 	for(i=0; i<max_asteroids_on_level; i++){
-	while((asteroid_field[i].X_coordinate <4) || (asteroid_field[i].X_coordinate >9 && asteroid_field[i].X_coordinate<68) || (asteroid_field[i].X_coordinate >74))
+		x=rand()%2;
+	if(x)
+		{
+			asteroid_field[i].X_coordinate= 4 + rand()%5;
+		}
+	else
 	{
-		asteroid_field[i].X_coordinate=rand()% (74-4)+4;
+		asteroid_field[i].X_coordinate= 74 - rand()%5;
 	}
 	asteroid_field[i].Y_coordinate=rand()% (12-3) + 3;
 
@@ -648,7 +653,7 @@ void create_asteroids(){
 	else{
 		asteroid_field[i].asteroid_direction = 1;
 	}
-	asteroid_field[i].asteroid_speed = 4;
+	asteroid_field[i].asteroid_speed = 2;
 	asteroid_field[i].type = rand()%(3-0);
 	asteroid_field[i].id = i;
 
@@ -1144,6 +1149,7 @@ int main()
 
 	clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
 
+
 	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0b11);	//display and text mode
 	set_cursor(666);
 	clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
@@ -1285,6 +1291,7 @@ int main()
 				game_over=1;
 			}
 		}
+		clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
 
 	}
 

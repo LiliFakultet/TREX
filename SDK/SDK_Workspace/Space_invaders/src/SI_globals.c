@@ -10,7 +10,7 @@
 /* init variables for interrupts */
 XIntc Intc;
 
-Xuint8	spaceship_speed = 8,
+Xuint8	spaceship_speed = 4,
 		spaceship_speed_cnt = 0,
 		spaceship_x = 0,
 		projectil_speed = 0,
