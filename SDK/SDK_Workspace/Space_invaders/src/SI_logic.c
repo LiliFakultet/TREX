@@ -55,6 +55,8 @@ void move_spaceship(Xuint8 *dir)
 	draw_ship(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x, SHIP_Y);
 }
 
+
+
 Xint8 projectile_hit_invader(int i, int j)
 {
 	int n;

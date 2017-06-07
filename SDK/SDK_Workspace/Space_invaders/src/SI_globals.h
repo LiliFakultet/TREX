@@ -38,6 +38,7 @@ extern struct asteroids_info {
 			X_coordinate,
 			asteroid_speed,
 			asteroid_direction,
+			type,
 			id;
 };
 /****************************/
