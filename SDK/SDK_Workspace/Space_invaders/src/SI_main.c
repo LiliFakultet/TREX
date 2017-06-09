@@ -624,7 +624,7 @@ void init_colors()
 
 void create_asteroids(){
 	int i,x;
-	max_asteroids_on_level = ASTEROID_INIT_COUNT * level * 3;
+	max_asteroids_on_level = 30;
 	current_asteroid_on_field = 0;
 	max_asteroids_on_field = level * ASTEROID_INIT_COUNT;
 	for(i = 0; i< 100; i++){
@@ -1182,7 +1182,7 @@ int main()
 	spaceship_flag = 0;
 	projectil_flag = 0;
 	shoot_flag = 0;
-	lives = 9;
+	lives = 50;
 	while(1){
 
 
@@ -1258,6 +1258,7 @@ int main()
 			if(current_asteroid_on_field == 10 * x){
 				print_level++;
 				x++;
+				spaceship_speed -=2;
 			}
 			current_spaceship_state = spaceship_dir-1;
 			switch(current_spaceship_state) {
