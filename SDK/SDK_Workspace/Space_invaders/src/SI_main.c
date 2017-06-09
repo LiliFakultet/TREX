@@ -624,7 +624,7 @@ void init_colors()
 
 void create_asteroids(){
 	int i,x;
-	max_asteroids_on_level = 30;
+	max_asteroids_on_level = 90;
 	current_asteroid_on_field = 0;
 	max_asteroids_on_field = level * ASTEROID_INIT_COUNT;
 	for(i = 0; i< 100; i++){
@@ -1125,6 +1125,7 @@ int main()
 	int current_state=0;
 	int x=1;
 	int print_level = 1;
+	int lives_flag = 0;
 
 	init_platform();
 	init_interrupt_controller();
@@ -1286,6 +1287,12 @@ int main()
 			case 7:
 				draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, spaceship_height, player_state8);
 				break;
+			}
+
+			if(lives < 10 && lives_flag == 0){
+				set_cursor(732);
+				print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, "  ", 2);
+				lives_flag++;
 			}
 
 			set_cursor(732);
