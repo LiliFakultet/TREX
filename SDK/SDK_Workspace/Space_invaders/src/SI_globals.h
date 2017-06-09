@@ -41,6 +41,13 @@ extern struct asteroids_info {
 			type,
 			id;
 };
+
+extern struct bullet{
+	Xuint8 bullet_dir,
+			bullet_X,
+			bullet_Y,
+			is_Bullet;
+};
 /****************************/
 
 /* main variables/maps */

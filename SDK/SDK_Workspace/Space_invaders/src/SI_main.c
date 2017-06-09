@@ -656,27 +656,14 @@ void create_asteroids(){
 	asteroid_field[i].asteroid_speed = 2;
 	asteroid_field[i].type = rand()%(3-0);
 	asteroid_field[i].id = i;
-
-	current_asteroid_on_field--;
-	/*switch (asteroid_field[i].id) {
-					case 0:
-						draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate,asteroid_field[i].Y_coordinate, asteroid_t1);
-						break;
-					case 1:
-						draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate,asteroid_field[i].Y_coordinate, asteroid_t2);
-						break;
-					default:
-						draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate,asteroid_field[i].Y_coordinate, asteroid_t3);
-						break;
-				}
-	}*/
 }
 }
 
 void move_asteroids()
 {
 	int i;
-	for(i=0; i<max_asteroids_on_level; i++){
+	for(i=0; i<current_asteroid_on_field; i++){
+		//current_asteroid_on_field++;
 		if(!destroyed_asteroids[asteroid_field[i].id]){
 			erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate, asteroid_field[i].Y_coordinate);
 				if(asteroid_field[i].asteroid_direction == 0)
@@ -684,6 +671,11 @@ void move_asteroids()
 						asteroid_field[i].X_coordinate--;
 						if(asteroid_field[i].X_coordinate == 40){
 							 destroyed_asteroids[asteroid_field[i].id] = 1;
+							 if(current_asteroid_on_field +1 != max_asteroids_on_level){
+								 current_asteroid_on_field++;
+							 }
+
+							 destroyed_asteroids[asteroid_field[current_asteroid_on_field].id] = 0;
 							 erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate-1, asteroid_field[i].Y_coordinate);
 							 lives--;
 							 break;
@@ -694,26 +686,17 @@ void move_asteroids()
 					asteroid_field[i].X_coordinate++;
 					if(asteroid_field[i].X_coordinate == 39){
 						destroyed_asteroids[asteroid_field[i].id] = 1;
+						if(current_asteroid_on_field +1 != max_asteroids_on_level){
+							current_asteroid_on_field++;
+													 }
+
+						 destroyed_asteroids[asteroid_field[current_asteroid_on_field].id] = 0;
 						erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate-1, asteroid_field[i].Y_coordinate);
 						lives--;
 						break;
 						}
 				}
 
-				/*else if(spaceship_x == MIN_SHIP_X)
-				{
-					spaceship_x++;
-					*dir = 0;
-				}
-				else
-					spaceship_x--;
-
-				if(ship_hit_projectile(spaceship_x-1) || ship_hit_projectile(spaceship_x+1))
-				{
-					if(--lives == 0)
-						game_over = 1;
-				}
-*/
 				switch (asteroid_field[i].type) {
 									case 0:
 										draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate,asteroid_field[i].Y_coordinate, asteroid_t1);
@@ -742,7 +725,6 @@ void init_variables(Xuint8* spaceship_dir, Xuint8* invader_dir, Xuint8* invader_
 		invader_dir[i] = RIGHT;
 		invader_dir_chng[i] = 1;
 		row[i] = i + INVADER_INIT_ROW;
-
 		flag_row[i] = 0;
 	}
 
@@ -1141,16 +1123,33 @@ int main()
 	Xuint8 game_over = 0;
 	Xuint8 spaceship_dir,current_spaceship_state , spaceship_height = 7;
 	int current_state=0;
-
+	int x=1;
+	int print_level = 1;
 
 	init_platform();
 	init_interrupt_controller();
 	init_colors();
 
+	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0b11); //display and text mode
+	clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+	clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+	set_cursor(3660);
+	print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, "PRESS DOWN", 10);
+
+
+	while(input != 30)	//wait for input from user
+			{
+				input = VGA_PERIPH_MEM_mReadMemory(XPAR_MY_PERIPHERAL_0_BASEADDR);
+				seed++;
+			}
+	srand(seed);
+
+
+
 	clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
 
 
-	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0b11);	//display and text mode
+
 	set_cursor(666);
 	clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
 	print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, "SCORE", strlen("SCORE"));
@@ -1179,6 +1178,7 @@ int main()
 	draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, spaceship_x+119, SHIP_Y-7, player_state1);
 
 	create_asteroids();
+	current_asteroid_on_field = max_asteroids_on_field;
 	spaceship_flag = 0;
 	projectil_flag = 0;
 	shoot_flag = 0;
@@ -1196,7 +1196,7 @@ int main()
 										case LEFT_JOY:
 											if(current_state == 0){
 												spaceship_dir = 3;
-												spaceship_speed = 4;
+												//spaceship_speed = 4;
 												current_state = 1;
 											}
 												break;
@@ -1204,7 +1204,7 @@ int main()
 										case RIGHT_JOY:
 											if(current_state == 0){
 												spaceship_dir = 7;
-												spaceship_speed = 4;
+												//spaceship_speed = 4;
 												current_state = 2;
 											}
 												break;
@@ -1254,6 +1254,11 @@ int main()
 				move_asteroids();
 				spaceship_flag = 0;
 			}
+
+			if(current_asteroid_on_field == 10 * x){
+				print_level++;
+				x++;
+			}
 			current_spaceship_state = spaceship_dir-1;
 			switch(current_spaceship_state) {
 			case 0:
@@ -1283,8 +1288,12 @@ int main()
 			}
 
 			set_cursor(732);
-							num_to_str(str, lives, num_len(lives));
-							print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, str, strlen(str));
+			num_to_str(str, lives, num_len(lives));
+			print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, str, strlen(str));
+
+			set_cursor(751 + 24);
+			num_to_str(str, print_level, num_len(print_level));
+			print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, str, strlen(str));
 
 
 			if(lives == 0){
@@ -1292,6 +1301,8 @@ int main()
 			}
 		}
 		clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+		set_cursor(3660);
+		print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, "GAME OVER", 9);
 
 	}
 
