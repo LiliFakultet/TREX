@@ -17,6 +17,8 @@ Xuint8 max_asteroids_on_level;
 	int current_asteroid_on_field;
 	int max_asteroids_on_field;
 	int destroyed_asteroids[100];
+	struct bullet projectile;
+	int score = 0;
 
 
 Xuint32 border_upper_left[26][3]=
@@ -63,6 +65,62 @@ Xuint32 border_horizontal[26][3]=
 {0x00000000, 0x00000000, 0x00000000},
 {0x00000000, 0x00000000, 0x00000000},
 {0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000} };
+
+Xuint32 bullet_right[26][3]=
+{{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00111111},
+{0x00000000, 0x00000000, 0x00111111},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000} };
+
+Xuint32 bullet_left[26][3]=
+{{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x00000000, 0x00000000, 0x00000000},
+{0x11111100, 0x00000000, 0x00000000},
+{0x11111100, 0x00000000, 0x00000000},
 {0x00000000, 0x00000000, 0x00000000},
 {0x00000000, 0x00000000, 0x00000000},
 {0x00000000, 0x00000000, 0x00000000},
@@ -697,21 +755,65 @@ void move_asteroids()
 						}
 				}
 
-				switch (asteroid_field[i].type) {
-									case 0:
-										draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate,asteroid_field[i].Y_coordinate, asteroid_t1);
-										break;
-									case 1:
-										draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate,asteroid_field[i].Y_coordinate, asteroid_t2);
-										break;
-									default:
-										draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate,asteroid_field[i].Y_coordinate, asteroid_t3);
-										break;
+				if(projectile.is_Bullet == 1){
+					if(projectile.bullet_dir == 1){
+						if(projectile.bullet_X < 76){
+						projectile.bullet_X++;
+						erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, projectile.bullet_X-1, projectile.bullet_Y);
+						} else{
+							projectile.is_Bullet = 0;
+						}
+					} else if(projectile.bullet_dir == 2){
+						if(projectile.bullet_X > 4){
+							projectile.bullet_X--;
+							erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, projectile.bullet_X+1, projectile.bullet_Y);
+						}
+						 else{
+									projectile.is_Bullet = 0;
 								}
+					}
+				}
+
+
+				if( asteroid_field[i].X_coordinate == projectile.bullet_X && asteroid_field[i].Y_coordinate == projectile.bullet_Y){
+					score+=10;
+					destroyed_asteroids[asteroid_field[i].id] = 1;
+					projectile.is_Bullet = 0;
+					if(current_asteroid_on_field +1 != max_asteroids_on_level){
+						current_asteroid_on_field++;
+					}
+					destroyed_asteroids[asteroid_field[current_asteroid_on_field].id] = 0;
+					erase_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate-1, asteroid_field[i].Y_coordinate);
+					break;
+
+			}
+
+				switch(projectile.bullet_dir){
+
+				case 1:
+					draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, projectile.bullet_X,projectile.bullet_Y, bullet_right);
+					break;
+				case 2:
+					draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, projectile.bullet_X,projectile.bullet_Y, bullet_left);
+					break;
+				default:
+					break;
+				}
+
+				switch (asteroid_field[i].type) {
+				case 0:
+					draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate,asteroid_field[i].Y_coordinate, asteroid_t1);
+					break;
+				case 1:
+					draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate,asteroid_field[i].Y_coordinate, asteroid_t2);
+					break;
+				default:
+					draw_bitmap(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, asteroid_field[i].X_coordinate,asteroid_field[i].Y_coordinate, asteroid_t3);
+					break;
+			}
 					}
 		}
 	}
-
 
 
 
@@ -1228,6 +1330,27 @@ int main()
 
 											}
 												break;
+
+										case MIDDLE_JOY:
+											if(projectile.is_Bullet == 0){
+												if(spaceship_dir == 3){
+													projectile.bullet_X = 40;
+													projectile.bullet_Y = spaceship_height;
+													projectile.bullet_dir = 1;
+													projectile.is_Bullet = 1;
+												} else if(spaceship_dir == 7){
+													projectile.bullet_X = 38;
+													projectile.bullet_Y = spaceship_height;
+													projectile.bullet_dir = 2;
+													projectile.is_Bullet = 1;
+												} else{
+													projectile.bullet_X = 39;
+													projectile.bullet_Y = spaceship_height;
+													projectile.bullet_dir = 0;
+													//projectile.is_Bullet = 0;
+												}
+											}
+											break;
 										case UP_JOY:
 											if(current_state == 0){
 												spaceship_height--;
@@ -1259,7 +1382,8 @@ int main()
 			if(current_asteroid_on_field == 10 * x){
 				print_level++;
 				x++;
-				spaceship_speed -=2;
+				if(spaceship_speed >= 2)
+					spaceship_speed -=2;
 			}
 			current_spaceship_state = spaceship_dir-1;
 			switch(current_spaceship_state) {
@@ -1298,6 +1422,11 @@ int main()
 			set_cursor(732);
 			num_to_str(str, lives, num_len(lives));
 			print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, str, strlen(str));
+
+			set_cursor(688);
+			num_to_str(str, score, num_len(score));
+			print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, str, strlen(str));
+
 
 			set_cursor(751 + 24);
 			num_to_str(str, print_level, num_len(print_level));

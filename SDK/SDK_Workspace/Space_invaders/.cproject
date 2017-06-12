@@ -94,7 +94,7 @@
 							</tool>
 							<tool id="xilinx.gnu.mb.size.debug.1772248402" name="MicroBlaze Print Size" superClass="xilinx.gnu.mb.size.debug"/>
 							<tool id="xilinx.elfcheck.mb.debug.149709677" name="Xilinx ELF Check" superClass="xilinx.elfcheck.mb.debug">
-								<option id="xilinx.elfcheck.option.hwspec.58583285" name="Hardware Specification" superClass="xilinx.elfcheck.option.hwspec" value="-hw ../../master_hw_platform/system.xml" valueType="string"/>
+								<option id="xilinx.elfcheck.option.hwspec.58583285" name="Hardware Specification" superClass="xilinx.elfcheck.option.hwspec" value="-hw ../../LPRS2_Asteroids_game_hw_platform/system.xml" valueType="string"/>
 								<option id="xilinx.elfcheck.option.procname.519692231" name="Processor Name" superClass="xilinx.elfcheck.option.procname" value="-pe microblaze_0" valueType="string"/>
 							</tool>
 						</toolChain>
@@ -186,7 +186,7 @@
 							</tool>
 							<tool id="xilinx.gnu.mb.size.release.1831032061" name="MicroBlaze Print Size" superClass="xilinx.gnu.mb.size.release"/>
 							<tool id="xilinx.elfcheck.mb.release.445991416" name="Xilinx ELF Check" superClass="xilinx.elfcheck.mb.release">
-								<option id="xilinx.elfcheck.option.hwspec.1573182564" name="Hardware Specification" superClass="xilinx.elfcheck.option.hwspec" value="-hw ../../master_hw_platform/system.xml" valueType="string"/>
+								<option id="xilinx.elfcheck.option.hwspec.1573182564" name="Hardware Specification" superClass="xilinx.elfcheck.option.hwspec" value="-hw ../../LPRS2_Asteroids_game_hw_platform/system.xml" valueType="string"/>
 								<option id="xilinx.elfcheck.option.procname.2065422139" name="Processor Name" superClass="xilinx.elfcheck.option.procname" value="-pe microblaze_0" valueType="string"/>
 							</tool>
 						</toolChain>
