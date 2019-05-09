@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Space_invaders</name>
-	<comment></comment>
+	<comment>Space_invaders_bsp - microblaze_0</comment>
 	<projects>
-		<project>standalone_bsp_0</project>
 		<project>Space_invaders_bsp</project>
 	</projects>
 	<buildSpec>

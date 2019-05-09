@@ -1,0 +1,13 @@
+11:32:26.008 INFO  - Processing command line option -hwspec D:\TREX\TREX\SDK\SDK_Export\hw\system.xml. 
+11:38:39.566 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+11:38:50.059 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:40:42.255 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

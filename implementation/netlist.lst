@@ -1,0 +1,17 @@
+D:\TREX\TREX\implementation\system.ngc 1557393672
+D:/TREX/TREX/implementation/system_my_peripheral_0_wrapper.ngc 1557393607
+D:/TREX/TREX/implementation/system_rs232_wrapper.ngc 1557393601
+D:/TREX/TREX/implementation/system_proc_sys_reset_0_wrapper.ngc 1557393521
+D:/TREX/TREX/implementation/system_clock_generator_0_wrapper.ngc 1557393647
+D:/TREX/TREX/implementation/system_vga_periph_mem_0_wrapper.ngc 1557393652
+D:/TREX/TREX/implementation/system_microblaze_0_ilmb_wrapper.ngc 1557393638
+D:/TREX/TREX/implementation/system_microblaze_0_dlmb_wrapper.ngc 1557393641
+D:/TREX/TREX/implementation/system_axi4lite_0_wrapper.ngc 1557393649
+D:/TREX/TREX/implementation/system_microblaze_0_wrapper.ngc 1557393644
+D:/TREX/TREX/implementation/system_axi_intc_0_wrapper.ngc 1557393630
+D:/TREX/TREX/implementation/system_fsl_v20_0_wrapper.ngc 1557393655
+D:/TREX/TREX/implementation/system_microblaze_0_i_bram_ctrl_wrapper.ngc 1557393530
+D:/TREX/TREX/implementation/system_microblaze_0_d_bram_ctrl_wrapper.ngc 1557393540
+D:/TREX/TREX/implementation/system_debug_module_wrapper.ngc 1557393580
+D:/TREX/TREX/implementation/system_microblaze_0_bram_block_wrapper.ngc 1557393545
+OK
