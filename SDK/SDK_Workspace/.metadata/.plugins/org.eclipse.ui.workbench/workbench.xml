@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="16" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
-<window height="749" width="1353" x="361" y="80">
+<window height="749" maximized="true" width="1353" x="356" y="-20">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -38,31 +38,48 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" partName="system.xml" path="D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/system.xml" title="system.xml" tooltip="TREX_hw_platform/system.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TREX_hw_platform/system.xml"/>
-</editor>
-<editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders_bsp/system.mss" title="system.mss" tooltip="Space_invaders_bsp/system.mss" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders_bsp/system.mss"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="platform_config.h" partName="platform_config.h" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders/src/platform_config.h" title="platform_config.h" tooltip="Space_invaders/src/platform_config.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders/src/platform_config.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" partName="platform.c" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders/src/platform.c" title="platform.c" tooltip="Space_invaders/src/platform.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders/src/platform.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="82" selectionTopPixel="0"/>
-</editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="SI_main.c" partName="SI_main.c" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders/src/SI_main.c" title="SI_main.c" tooltip="Space_invaders/src/SI_main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders/src/SI_main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="21243"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="31867" selectionTopPixel="10785"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_globals.h" partName="SI_globals.h" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders/src/SI_globals.h" title="SI_globals.h" tooltip="Space_invaders/src/SI_globals.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders/src/SI_globals.h"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SI_draw.c" partName="SI_draw.c" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders/src/SI_draw.c" title="SI_draw.c" tooltip="Space_invaders/src/SI_draw.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders/src/SI_draw.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="14977" selectionTopPixel="6630"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SI_defines.h" partName="SI_defines.h" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders/src/SI_defines.h" title="SI_defines.h" tooltip="Space_invaders/src/SI_defines.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders/src/SI_defines.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="590" selectionTopPixel="101"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SI_draw.h" partName="SI_draw.h" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders/src/SI_draw.h" title="SI_draw.h" tooltip="Space_invaders/src/SI_draw.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders/src/SI_draw.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="D:/TREX/TREX/SDK/SDK_Workspace/VGAtest/src/helloworld.c" title="helloworld.c" tooltip="VGAtest/src/helloworld.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VGAtest/src/helloworld.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4873" selectionTopPixel="1406"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SI_interrupt.h" partName="SI_interrupt.h" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders/src/SI_interrupt.h" title="SI_interrupt.h" tooltip="Space_invaders/src/SI_interrupt.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders/src/SI_interrupt.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SI_interrupt.c" partName="SI_interrupt.c" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders/src/SI_interrupt.c" title="SI_interrupt.c" tooltip="Space_invaders/src/SI_interrupt.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders/src/SI_interrupt.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1140" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" partName="platform.c" path="D:/TREX/TREX/SDK/SDK_Workspace/VGAtest/src/platform.c" title="platform.c" tooltip="VGAtest/src/platform.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VGAtest/src/platform.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="82" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SI_logic.c" partName="SI_logic.c" path="D:/TREX/TREX/SDK/SDK_Workspace/Space_invaders/src/SI_logic.c" title="SI_logic.c" tooltip="Space_invaders/src/SI_logic.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Space_invaders/src/SI_logic.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="386" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -70,12 +87,19 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (1 item)"/>
+<category IMemento.internal.id="Warnings (4 items)"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -142,13 +166,14 @@
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.cdt.make.ui.views.MakeView"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.tm.terminal.view.TerminalView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.cdt.make.ui.views.MakeView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -179,12 +204,14 @@
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.tm.terminal.view.TerminalView" label="Terminal"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -205,26 +232,167 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/TREX_hw_platform/system.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/Space_invaders_bsp/system.mss"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/platform_config.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/platform.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/VGAtest/src/helloworld.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/VGAtest/src/platform.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/SI_interrupt.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/SI_logic.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/SI_main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/SI_globals.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/SI_draw.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/SI_defines.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/SI_draw.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/SI_interrupt.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Space_invaders/src/SI_interrupt.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/VGAtest/src/platform.c"/>
 </editors>
-<item historyLabel="system.xml" index="0"/>
-<item historyLabel="system.mss" index="1"/>
-<item historyLabel="platform_config.h" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="platform.c" index="3">
+<item historyLabel="platform.c" index="1">
 <position info="not_deleted" x="82" y="0"/>
 </item>
-<item historyLabel="SI_main.c" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="SI_interrupt.c" index="2">
+<position info="not_deleted" x="1392" y="4"/>
 </item>
-<item active="true" historyLabel="SI_globals.h" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="SI_logic.c" index="3">
+<position info="not_deleted" x="4" y="0"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="40627" y="0"/>
+</item>
+<item historyLabel="SI_draw.c" index="5">
+<position info="not_deleted" x="996" y="12"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="43980" y="11"/>
+</item>
+<item historyLabel="SI_draw.c" index="5">
+<position info="not_deleted" x="3419" y="10"/>
+</item>
+<item historyLabel="SI_defines.h" index="6">
+<position info="not_deleted" x="1240" y="0"/>
+</item>
+<item historyLabel="SI_draw.h" index="7">
+<position info="not_deleted" x="4" y="0"/>
+</item>
+<item historyLabel="SI_draw.c" index="5">
+<position info="not_deleted" x="150" y="11"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="41697" y="11"/>
+</item>
+<item historyLabel="SI_draw.c" index="5">
+<position info="not_deleted" x="145" y="443"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position/>
+</item>
+<item historyLabel="SI_draw.h" index="7">
+<position info="not_deleted" x="4" y="0"/>
+</item>
+<item historyLabel="SI_defines.h" index="6">
+<position info="not_deleted" x="1240" y="0"/>
+</item>
+<item historyLabel="SI_draw.c" index="5">
+<position info="not_deleted" x="145" y="443"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="41611" y="41"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position/>
+</item>
+<item historyLabel="SI_interrupt.h" index="8">
+<position info="not_deleted" x="4" y="0"/>
+</item>
+<item historyLabel="SI_interrupt.c" index="9">
+<position info="not_deleted" x="1140" y="0"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="40531" y="68"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5515" y="0"/>
+</item>
+<item historyLabel="SI_draw.c" index="5">
+<position info="not_deleted" x="14849" y="131"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="40531" y="68"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="4709" y="41"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="39157" y="111"/>
+</item>
+<item historyLabel="platform.c" index="10">
+<position info="not_deleted" x="82" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5447" y="0"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="40603" y="15"/>
+</item>
+<item historyLabel="SI_draw.c" index="5">
+<position info="not_deleted" x="14977" y="0"/>
+</item>
+<item historyLabel="SI_logic.c" index="3">
+<position info="not_deleted" x="386" y="0"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="40603" y="15"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="30806" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="4676" y="0"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="45464" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="39268" y="64"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5336" y="0"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="39758" y="64"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5336" y="0"/>
+</item>
+<item historyLabel="SI_logic.c" index="3">
+<position info="not_deleted" x="386" y="0"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="31499" y="189"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5190" y="0"/>
+</item>
+<item historyLabel="SI_main.c" index="4">
+<position info="not_deleted" x="31867" y="12"/>
+</item>
+<item historyLabel="SI_defines.h" index="6">
+<position info="not_deleted" x="590" y="9"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5190" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="5187" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2889" y="0"/>
+</item>
+<item active="true" historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="4995" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -243,23 +411,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_globals.h" tooltip="Space_invaders/src/SI_globals.h">
-<persistable path="/Space_invaders/src/SI_globals.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_logic.c" tooltip="Space_invaders/src/SI_logic.c">
+<persistable path="/Space_invaders/src/SI_logic.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="VGAtest/src/platform.c">
+<persistable path="/VGAtest/src/platform.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_interrupt.c" tooltip="Space_invaders/src/SI_interrupt.c">
+<persistable path="/Space_invaders/src/SI_interrupt.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_interrupt.h" tooltip="Space_invaders/src/SI_interrupt.h">
+<persistable path="/Space_invaders/src/SI_interrupt.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" tooltip="VGAtest/src/helloworld.c">
+<persistable path="/VGAtest/src/helloworld.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_draw.h" tooltip="Space_invaders/src/SI_draw.h">
+<persistable path="/Space_invaders/src/SI_draw.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_defines.h" tooltip="Space_invaders/src/SI_defines.h">
+<persistable path="/Space_invaders/src/SI_defines.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_draw.c" tooltip="Space_invaders/src/SI_draw.c">
+<persistable path="/Space_invaders/src/SI_draw.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_main.c" tooltip="Space_invaders/src/SI_main.c">
 <persistable path="/Space_invaders/src/SI_main.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="Space_invaders/src/platform.c">
-<persistable path="/Space_invaders/src/platform.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="VGAtest_bsp/microblaze_0/include/xparameters.h">
+<persistable path="/VGAtest_bsp/microblaze_0/include/xparameters.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform_config.h" tooltip="Space_invaders/src/platform_config.h">
-<persistable path="/Space_invaders/src/platform_config.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.h" tooltip="Space_invaders/src/platform.h">
+<persistable path="/Space_invaders/src/platform.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="Space_invaders_bsp/system.mss">
-<persistable path="/Space_invaders_bsp/system.mss"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_logic.h" tooltip="Space_invaders/src/SI_logic.h">
+<persistable path="/Space_invaders/src/SI_logic.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" tooltip="TREX_hw_platform/system.xml">
-<persistable path="/TREX_hw_platform/system.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_globals.c" tooltip="Space_invaders/src/SI_globals.c">
+<persistable path="/Space_invaders/src/SI_globals.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="VGAtest_bsp/system.mss">
+<persistable path="/VGAtest_bsp/system.mss"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_globals.h" tooltip="Space_invaders/src/SI_globals.h">
+<persistable path="/Space_invaders/src/SI_globals.h"/>
 </file>
 </mruList>
 </workbench>

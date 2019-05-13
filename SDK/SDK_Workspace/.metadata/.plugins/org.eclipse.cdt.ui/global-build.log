@@ -1,339 +1,745 @@
-11:37:05 **** Clean-only build of configuration Debug for project Space_invaders ****
-make clean 
-rm -rf  ./src/SI_draw.o ./src/SI_globals.o ./src/SI_interrupt.o ./src/SI_logic.o ./src/SI_main.o ./src/platform.o  ./src/SI_draw.d ./src/SI_globals.d ./src/SI_interrupt.d ./src/SI_logic.d ./src/SI_main.d ./src/platform.d  Space_invaders.elf.size  Space_invaders.elf.elfcheck  Space_invaders.elf
+11:40:59 **** Incremental Build of configuration Debug for project VGAtest ****
+make all 
+make: Ništa za napraviti za `all'.
+11:41:10 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:165:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
 ' '
-11:37:05 **** Clean-only build of project Space_invaders_bsp ****
-make -k clean 
-rm -rf microblaze_0
-11:37:05 **** Build of project Space_invaders_bsp ****
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7826	    316	   2250	  10392	   2898	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:41:21 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:165:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7826	    316	   2250	  10392	   2898	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:41:31 **** Auto Build of project Space_invaders_bsp ****
 make -k all 
-libgen -hw ../TREX_hw_platform/system.xml\
-	       \
-	       -pe microblaze_0 \
-	       -log libgen.log \
-	       system.mss
-libgen
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: libgen -hw ../TREX_hw_platform/system.xml -pe microblaze_0 -log
-libgen.log system.mss 
-
-
-Staging source files.
-Running DRCs.
-Running generate.
-Running post_generate.
-Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
-"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
--mxl-pattern-compare -mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
--ffunction-sections -fdata-sections"'.
-
-Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
-"COMPILER_FLAGS=-mlittle-endian -mno-xl-soft-mul -mxl-barrel-shift
--mxl-pattern-compare -mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g
--ffunction-sections -fdata-sections"'.
-"Compiling common"
-"Compiling standalone";
-"Compiling intc"
-"Compiling uartlite"
-"Compiling bram"
-"Compiling cpu"
-Running execs_generate.
 'Finished building libraries'
-11:37:11 **** Build of configuration Debug for project Space_invaders ****
+11:41:31 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:42:00 **** Auto Build of configuration Debug for project VGAtest ****
 make all 
-'Building file: ../src/SI_draw.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_draw.d" -MT"src/SI_draw.d" -o "src/SI_draw.o" "../src/SI_draw.c"
-In file included from ../src/SI_draw.h:12:0,
-                 from ../src/SI_draw.c:8:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_draw.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:165:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
 ' '
-'Building file: ../src/SI_globals.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_globals.d" -MT"src/SI_globals.d" -o "src/SI_globals.o" "../src/SI_globals.c"
-In file included from ../src/SI_globals.c:8:0:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_globals.c'
-' '
-'Building file: ../src/SI_interrupt.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_interrupt.d" -MT"src/SI_interrupt.d" -o "src/SI_interrupt.o" "../src/SI_interrupt.c"
-In file included from ../src/SI_interrupt.h:11:0,
-                 from ../src/SI_interrupt.c:8:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_interrupt.c'
-' '
-'Building file: ../src/SI_logic.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_logic.d" -MT"src/SI_logic.d" -o "src/SI_logic.o" "../src/SI_logic.c"
-In file included from ../src/SI_logic.h:12:0,
-                 from ../src/SI_logic.c:8:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_logic.c'
-' '
-'Building file: ../src/SI_main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_main.d" -MT"src/SI_main.d" -o "src/SI_main.o" "../src/SI_main.c"
-In file included from ../src/SI_logic.h:12:0,
-                 from ../src/SI_main.c:9:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_main.c: In function 'main':
-../src/SI_main.c:1281:2: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1391:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1394:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1397:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1400:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1403:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1406:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1409:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1412:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1224:9: warning: unused variable 'k' [-Wunused-variable]
-../src/SI_main.c:1223:22: warning: unused variable 'y_crdnt' [-Wunused-variable]
-../src/SI_main.c:1221:12: warning: unused variable 'j' [-Wunused-variable]
-../src/SI_main.c:1221:9: warning: unused variable 'i' [-Wunused-variable]
-'Finished building: ../src/SI_main.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: Space_invaders.elf'
+'Building target: VGAtest.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Space_invaders_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Space_invaders.elf"  ./src/SI_draw.o ./src/SI_globals.o ./src/SI_interrupt.o ./src/SI_logic.o ./src/SI_main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-c:/xilinx/14.6/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: Space_invaders.elf section `.heap' will not fit in region `microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl'
-c:/xilinx/14.6/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl' overflowed by 1544 bytes
-collect2: ld returned 1 exit status
-make: *** [Space_invaders.elf] Greška 1
-11:37:37 **** Clean-only build of configuration Debug for project Space_invaders ****
-make clean 
-rm -rf  ./src/SI_draw.o ./src/SI_globals.o ./src/SI_interrupt.o ./src/SI_logic.o ./src/SI_main.o ./src/platform.o  ./src/SI_draw.d ./src/SI_globals.d ./src/SI_interrupt.d ./src/SI_logic.d ./src/SI_main.d ./src/platform.d  Space_invaders.elf.size  Space_invaders.elf.elfcheck  Space_invaders.elf
-' '
-11:37:37 **** Auto Build of configuration Debug for project Space_invaders ****
-make all 
-'Building file: ../src/SI_draw.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_draw.d" -MT"src/SI_draw.d" -o "src/SI_draw.o" "../src/SI_draw.c"
-In file included from ../src/SI_draw.h:12:0,
-                 from ../src/SI_draw.c:8:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_draw.c'
-' '
-'Building file: ../src/SI_globals.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_globals.d" -MT"src/SI_globals.d" -o "src/SI_globals.o" "../src/SI_globals.c"
-In file included from ../src/SI_globals.c:8:0:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_globals.c'
-' '
-'Building file: ../src/SI_interrupt.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_interrupt.d" -MT"src/SI_interrupt.d" -o "src/SI_interrupt.o" "../src/SI_interrupt.c"
-In file included from ../src/SI_interrupt.h:11:0,
-                 from ../src/SI_interrupt.c:8:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_interrupt.c'
-' '
-'Building file: ../src/SI_logic.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_logic.d" -MT"src/SI_logic.d" -o "src/SI_logic.o" "../src/SI_logic.c"
-In file included from ../src/SI_logic.h:12:0,
-                 from ../src/SI_logic.c:8:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_logic.c'
-' '
-'Building file: ../src/SI_main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_main.d" -MT"src/SI_main.d" -o "src/SI_main.o" "../src/SI_main.c"
-In file included from ../src/SI_logic.h:12:0,
-                 from ../src/SI_main.c:9:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_main.c: In function 'main':
-../src/SI_main.c:1281:2: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1391:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1394:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1397:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1400:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1403:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1406:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1409:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1412:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1224:9: warning: unused variable 'k' [-Wunused-variable]
-../src/SI_main.c:1223:22: warning: unused variable 'y_crdnt' [-Wunused-variable]
-../src/SI_main.c:1221:12: warning: unused variable 'j' [-Wunused-variable]
-../src/SI_main.c:1221:9: warning: unused variable 'i' [-Wunused-variable]
-../src/SI_main.c:1341:22: warning: 'spaceship_dir' may be used uninitialized in this function [-Wuninitialized]
-'Finished building: ../src/SI_main.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: Space_invaders.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Space_invaders_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Space_invaders.elf"  ./src/SI_draw.o ./src/SI_globals.o ./src/SI_interrupt.o ./src/SI_logic.o ./src/SI_main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Space_invaders.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size Space_invaders.elf  |tee "Space_invaders.elf.size"
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  17068	   8224	   5900	  31192	   79d8	Space_invaders.elf
-'Finished building: Space_invaders.elf.size'
+   7826	    316	   2250	  10392	   2898	VGAtest.elf
+'Finished building: VGAtest.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
-elfcheck Space_invaders.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "Space_invaders.elf.elfcheck"
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
 elfcheck
 Xilinx EDK 14.6 Build EDK_P.68d
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
-Space_invaders.elf 
+VGAtest.elf 
 
-ELF file	: Space_invaders.elf
+ELF file	: VGAtest.elf
 elfcheck passed.
-'Finished building: Space_invaders.elf.elfcheck'
+'Finished building: VGAtest.elf.elfcheck'
 ' '
-11:37:41 **** Clean-only build of configuration Debug for project Space_invaders ****
-make clean 
-rm -rf  ./src/SI_draw.o ./src/SI_globals.o ./src/SI_interrupt.o ./src/SI_logic.o ./src/SI_main.o ./src/platform.o  ./src/SI_draw.d ./src/SI_globals.d ./src/SI_interrupt.d ./src/SI_logic.d ./src/SI_main.d ./src/platform.d  Space_invaders.elf.size  Space_invaders.elf.elfcheck  Space_invaders.elf
-' '
-11:37:42 **** Auto Build of configuration Debug for project Space_invaders ****
+11:42:02 **** Auto Build of configuration Debug for project VGAtest ****
 make all 
-'Building file: ../src/SI_draw.c'
+'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_draw.d" -MT"src/SI_draw.d" -o "src/SI_draw.o" "../src/SI_draw.c"
-In file included from ../src/SI_draw.h:12:0,
-                 from ../src/SI_draw.c:8:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_draw.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:165:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
 ' '
-'Building file: ../src/SI_globals.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_globals.d" -MT"src/SI_globals.d" -o "src/SI_globals.o" "../src/SI_globals.c"
-In file included from ../src/SI_globals.c:8:0:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_globals.c'
-' '
-'Building file: ../src/SI_interrupt.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_interrupt.d" -MT"src/SI_interrupt.d" -o "src/SI_interrupt.o" "../src/SI_interrupt.c"
-In file included from ../src/SI_interrupt.h:11:0,
-                 from ../src/SI_interrupt.c:8:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_interrupt.c'
-' '
-'Building file: ../src/SI_logic.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_logic.d" -MT"src/SI_logic.d" -o "src/SI_logic.o" "../src/SI_logic.c"
-In file included from ../src/SI_logic.h:12:0,
-                 from ../src/SI_logic.c:8:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-'Finished building: ../src/SI_logic.c'
-' '
-'Building file: ../src/SI_main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/SI_main.d" -MT"src/SI_main.d" -o "src/SI_main.o" "../src/SI_main.c"
-In file included from ../src/SI_logic.h:12:0,
-                 from ../src/SI_main.c:9:
-../src/SI_globals.h:43:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_globals.h:50:1: warning: useless storage class specifier in empty declaration [enabled by default]
-../src/SI_main.c: In function 'main':
-../src/SI_main.c:1281:2: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1391:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1394:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1397:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1400:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1403:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1406:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1409:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1412:5: warning: passing argument 4 of 'draw_bitmap' from incompatible pointer type [enabled by default]
-../src/SI_draw.h:30:6: note: expected 'Xuint32 (*)[3]' but argument is of type 'unsigned int (*)[3]'
-../src/SI_main.c:1224:9: warning: unused variable 'k' [-Wunused-variable]
-../src/SI_main.c:1223:22: warning: unused variable 'y_crdnt' [-Wunused-variable]
-../src/SI_main.c:1221:12: warning: unused variable 'j' [-Wunused-variable]
-../src/SI_main.c:1221:9: warning: unused variable 'i' [-Wunused-variable]
-../src/SI_main.c:1341:22: warning: 'spaceship_dir' may be used uninitialized in this function [-Wuninitialized]
-'Finished building: ../src/SI_main.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -Os -g3 -c -fmessage-length=0 -I../../Space_invaders_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: Space_invaders.elf'
+'Building target: VGAtest.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Space_invaders_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Space_invaders.elf"  ./src/SI_draw.o ./src/SI_globals.o ./src/SI_interrupt.o ./src/SI_logic.o ./src/SI_main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Space_invaders.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size Space_invaders.elf  |tee "Space_invaders.elf.size"
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  17068	   8224	   5900	  31192	   79d8	Space_invaders.elf
-'Finished building: Space_invaders.elf.size'
+   7826	    316	   2250	  10392	   2898	VGAtest.elf
+'Finished building: VGAtest.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
-elfcheck Space_invaders.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "Space_invaders.elf.elfcheck"
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
 elfcheck
 Xilinx EDK 14.6 Build EDK_P.68d
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
-Space_invaders.elf 
+VGAtest.elf 
 
-ELF file	: Space_invaders.elf
+ELF file	: VGAtest.elf
 elfcheck passed.
-'Finished building: Space_invaders.elf.elfcheck'
+'Finished building: VGAtest.elf.elfcheck'
 ' '
-11:38:13 **** Incremental Build of configuration Debug for project Space_invaders ****
+11:42:13 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:42:13 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:42:20 **** Auto Build of configuration Debug for project VGAtest ****
 make all 
-make: Ništa za napraviti za `all'.
-11:38:35 **** Incremental Build of configuration Debug for project Space_invaders ****
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'vga_interrupt_handler':
+../src/helloworld.c:148:2: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:165:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7826	    316	   2250	  10392	   2898	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:42:32 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:42:32 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:42:49 **** Auto Build of configuration Debug for project VGAtest ****
 make all 
-make: Ništa za napraviti za `all'.
-11:38:50 **** Auto Build of project Space_invaders_bsp ****
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'vga_interrupt_handler':
+../src/helloworld.c:148:2: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:165:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7826	    316	   2250	  10392	   2898	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:43:08 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:165:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7818	    316	   2250	  10384	   2890	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:43:22 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:43:23 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:45:41 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:168:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7818	    316	   2250	  10384	   2890	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:45:49 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:155:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7818	    316	   2250	  10384	   2890	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:46:00 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:155:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7826	    316	   2250	  10392	   2898	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:46:10 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:46:10 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:46:36 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:158:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7850	    316	   2250	  10416	   28b0	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:46:47 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:46:47 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:47:38 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:162:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7890	    316	   2250	  10456	   28d8	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:47:49 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:47:49 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:48:01 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:162:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7890	    316	   2250	  10456	   28d8	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:48:11 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:48:11 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:49:12 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:162:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7870	    316	   2240	  10426	   28ba	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:49:23 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:49:23 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:49:32 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:162:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7870	    316	   2240	  10426	   28ba	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:49:45 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:162:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7870	    316	   2240	  10426	   28ba	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:49:55 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:49:55 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:49:59 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:162:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7890	    316	   2250	  10456	   28d8	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:50:09 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:50:09 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:50:14 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:162:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7890	    316	   2250	  10456	   28d8	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:50:24 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:50:24 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+11:50:26 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:162:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7890	    316	   2250	  10456	   28d8	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:50:54 **** Auto Build of configuration Debug for project VGAtest ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../VGAtest_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:166:6: warning: unused variable 'i' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: VGAtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../VGAtest_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "VGAtest.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGAtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size VGAtest.elf  |tee "VGAtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7966	    316	   2240	  10522	   291a	VGAtest.elf
+'Finished building: VGAtest.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck VGAtest.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "VGAtest.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+VGAtest.elf 
+
+ELF file	: VGAtest.elf
+elfcheck passed.
+'Finished building: VGAtest.elf.elfcheck'
+' '
+11:51:05 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+11:51:05 **** Auto Build of project VGAtest_bsp ****
 make -k all 
 'Finished building libraries'
