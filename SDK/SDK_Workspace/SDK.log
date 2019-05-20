@@ -79,3 +79,102 @@
 11:50:23.043 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
 11:51:04.335 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
 11:51:54.594 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:52:54.566 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+10:53:09.849 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:01:08.008 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:25:02.719 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:06:33.339 INFO  - Successfully generated D:\TREX\TREX\SDK\SDK_Workspace\TREX\src\lscript.ld. 
+11:06:33.386 INFO  - Applying linker script to all configurations of project TREX. 
+11:06:33.387 INFO  - Setting rebuild state to true for all configurations of project TREX. 
+11:30:31.654 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+11:30:41.081 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+11:30:52.010 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+11:31:11.077 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+11:31:16.170 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:31:51.305 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+Failed to Scan JTAG Chain
+    Unknown Error
+ 
+11:33:07.547 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:34:44.114 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:35:31.381 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:35:42.230 WARN  - Terminating existing sessions on processor microblaze_0 
+11:35:43.582 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:37:47.738 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:37:59.037 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:38:22.917 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:38:43.012 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:39:52.667 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:43:34.127 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:45:11.684 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:45:47.154 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:46:00.806 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:46:55.365 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:47:19.723 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:47:53.680 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:49:07.752 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:49:21.220 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:49:38.691 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:49:48.191 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:50:14.561 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:50:37.328 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:50:44.328 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:50:56.986 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:51:31.434 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:51:54.184 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:52:25.246 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:52:43.501 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:53:12.871 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:54:40.954 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:55:37.041 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:55:57.213 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:57:08.385 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:57:25.174 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:57:48.761 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:59:57.047 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:03:48.015 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:04:43.492 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:05:03.738 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:05:12.621 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:05:32.632 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:05:47.310 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:05:50.608 INFO  - System reset is completed. 
+12:06:34.323 WARN  - Terminating existing sessions on processor microblaze_0 
+12:06:35.642 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+12:07:04.971 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+12:08:31.366 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:10:11.245 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:10:29.732 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:11:01.500 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:11:40.486 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:12:03.167 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:12:33.928 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+12:12:33.963 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+12:12:33.965 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 

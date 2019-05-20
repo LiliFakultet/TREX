@@ -42,6 +42,11 @@
 #define VGA_PERIPH_MEM_mReadMemory(Address) \
  	Xil_In32(Address)
 
+#define LEFT_JOY 23
+#define MIDDLE_JOY 27
+#define RIGHT_JOY 29
+#define DOWN_JOY 30
+#define UP_JOY 15
 
 
 #define PUT_TO_FSL(address, value) \
@@ -147,6 +152,16 @@ void vga_interrupt_handler(void *BaseAddress) {
 
 	for (i = 0; i < 80; i++) {
 		draw_bitmap(0x55555555, i, j);
+	}
+
+	int input= Xil_In32(XPAR_MY_PERIPHERAL_0_BASEADDR);
+	switch (input) {
+	case UP_JOY:
+		print("up");
+		break;
+	case MIDDLE_JOY:
+		print("down");
+		break;
 	}
 }
 

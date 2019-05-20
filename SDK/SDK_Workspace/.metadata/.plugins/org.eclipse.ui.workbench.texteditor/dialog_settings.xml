@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="TEXT_MEM_OFF" key="selection"/>
+		<item value="text" key="selection"/>
 		<list key="findhistory">
+			<item value="text"/>
+			<item value="clear"/>
+			<item value="colear"/>
+			<item value="input"/>
 			<item value="TEXT_MEM_OFF"/>
 			<item value="clear_text_screen"/>
 			<item value="init_draw"/>
 			<item value="clear_g"/>
-			<item value="draw_bitmap"/>
-			<item value="player_state1"/>
-			<item value="player_state3"/>
-			<item value="bitmap"/>
 		</list>
 		<list key="replacehistory">
 		</list>
