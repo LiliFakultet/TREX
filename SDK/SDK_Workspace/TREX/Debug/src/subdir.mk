@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/cactus.c \
 ../src/main.c \
 ../src/platform.c \
 ../src/player.c \
@@ -13,12 +14,14 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 OBJS += \
+./src/cactus.o \
 ./src/main.o \
 ./src/platform.o \
 ./src/player.o \
 ./src/sprite.o 
 
 C_DEPS += \
+./src/cactus.d \
 ./src/main.d \
 ./src/platform.d \
 ./src/player.d \

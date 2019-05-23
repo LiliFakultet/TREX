@@ -1,0 +1,9 @@
+#pragma once
+
+struct Cactus {
+    uint32_t x;
+    uint32_t y;
+    PlayerState state;
+    PlayerAnimation animation;
+    Sprite *sprites[PLAYER_ANIMATION_COUNT];
+};

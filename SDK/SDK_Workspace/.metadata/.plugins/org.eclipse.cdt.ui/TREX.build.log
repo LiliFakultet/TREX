@@ -1,6 +1,51 @@
-12:12:01 **** Incremental Build of configuration Debug for project TREX ****
+11:54:38 **** Auto Build of configuration Debug for project TREX ****
 make all 
-make: Ništa za napraviti za `all'.
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -pedantic -Os -g3 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../../TREX_bsp/microblaze_0/include/fsl.h:5:0,
+                 from ../src/sprite.h:3,
+                 from ../src/player.h:4,
+                 from ../src/main.c:4:
+../../TREX_bsp/microblaze_0/include/mb_interface.h:1:1: warning: C++ style comments are not allowed in ISO C90 [enabled by default]
+../../TREX_bsp/microblaze_0/include/mb_interface.h:1:1: warning: (this will be reported only once per input file) [enabled by default]
+In file included from ../src/player.h:4:0,
+                 from ../src/main.c:4:
+../src/sprite.h:19:1: warning: C++ style comments are not allowed in ISO C90 [enabled by default]
+../src/sprite.h:19:1: warning: (this will be reported only once per input file) [enabled by default]
+In file included from ../../TREX_bsp/microblaze_0/include/xil_io.h:77:0,
+                 from ../src/main.c:8:
+../../TREX_bsp/microblaze_0/include/xil_types.h:132:23: warning: ISO C90 does not support 'long long' [-Wlong-long]
+../../TREX_bsp/microblaze_0/include/xil_types.h:137:14: warning: ISO C90 does not support 'long long' [-Wlong-long]
+../src/main.c: In function 'vga_interrupt_handler':
+../src/main.c:111:1: warning: C++ style comments are not allowed in ISO C90 [enabled by default]
+../src/main.c:111:1: warning: (this will be reported only once per input file) [enabled by default]
+'Finished building: ../src/main.c'
+' '
+'Building target: TREX.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "TREX.elf"  ./src/cactus.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TREX.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size TREX.elf  |tee "TREX.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  16580	   1440	   2420	  20440	   4fd8	TREX.elf
+'Finished building: TREX.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-12:12:01 Build Finished (took 123ms)
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+TREX.elf 
+
+ELF file	: TREX.elf
+elfcheck passed.
+'Finished building: TREX.elf.elfcheck'
+' '
+
+11:54:39 Build Finished (took 1s.470ms)
 

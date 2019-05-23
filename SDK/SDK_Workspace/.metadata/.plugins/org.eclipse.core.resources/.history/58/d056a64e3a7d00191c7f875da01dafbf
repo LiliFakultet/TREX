@@ -1,0 +1,13 @@
+#pragma once
+
+#include <stdint.h>
+
+#define CACTUS_VARIANT_COUNT 1
+
+
+
+struct Cactus {
+    uint32_t x;
+    uint32_t y;
+    Sprite *sprites[CACTUS_VARIANT_COUNT];
+};

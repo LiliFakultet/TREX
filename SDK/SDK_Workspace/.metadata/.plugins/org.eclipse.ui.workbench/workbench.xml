@@ -13,7 +13,7 @@
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="284" y="22"/>
+<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="com.xilinx.sdk.xbash.toolbar1" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="com.xilinx.sdk.targetmanager.ui.toolbar1" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="com.xilinx.sdk.sw.toolbar1" itemType="typeToolBarContribution" x="38" y="22"/>
@@ -35,36 +35,32 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.internal.EditorStack@2cd7f2b6" ratio="0.58293515" ratioLeft="854" ratioRight="611" relationship="2" relative="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="cactus.h" partName="cactus.h" path="D:/TREX/TREX/SDK/SDK_Workspace/TREX/src/cactus.h" title="cactus.h" tooltip="TREX/src/cactus.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TREX/src/cactus.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="271" selectionTopPixel="0"/>
+</editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="sprite.h" partName="sprite.h" path="D:/TREX/TREX/SDK/SDK_Workspace/TREX/src/sprite.h" title="sprite.h" tooltip="TREX/src/sprite.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TREX/src/sprite.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="365" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="34" selectionTopPixel="0"/>
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/TREX/TREX/SDK/SDK_Workspace/TREX/src/main.c" title="main.c" tooltip="TREX/src/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TREX/src/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1622" selectionTopPixel="998"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="778" selectionTopPixel="45"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="player.c" partName="player.c" path="D:/TREX/TREX/SDK/SDK_Workspace/TREX/src/player.c" title="player.c" tooltip="TREX/src/player.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TREX/src/player.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10263" selectionTopPixel="3338"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="D:/TREX/TREX/SDK/SDK_Workspace/VGAtest/src/helloworld.c" title="helloworld.c" tooltip="VGAtest/src/helloworld.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/VGAtest/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="1125"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sprite.c" partName="sprite.c" path="D:/TREX/TREX/SDK/SDK_Workspace/TREX/src/sprite.c" title="sprite.c" tooltip="TREX/src/sprite.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TREX/src/sprite.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="725" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" partName="platform.c" path="D:/TREX/TREX/SDK/SDK_Workspace/TREX/src/platform.c" title="platform.c" tooltip="TREX/src/platform.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TREX/src/platform.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2351" selectionTopPixel="458"/>
+<editor focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="cactus.c" partName="cactus.c" path="D:/TREX/TREX/SDK/SDK_Workspace/TREX/src/cactus.c" title="cactus.c" tooltip="TREX/src/cactus.c" workbook="org.eclipse.ui.internal.EditorStack@2cd7f2b6">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TREX/src/cactus.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="2761" selectionTopPixel="548"/>
 </editor>
 </editors>
 <views>
@@ -101,9 +97,9 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (6 items)"/>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (3 items)"/>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -207,7 +203,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@7e17d2f4" ratio="0.7497326" ratioLeft="701" ratioRight="234" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@7e17d2f4" ratio="0.74892706" ratioLeft="698" ratioRight="234" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -275,27 +271,18 @@
 <view id="com.xilinx.sdk.targetmanager.ui.XmdConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7497326" ratioLeft="701" ratioRight="234" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7497326" ratioLeft="701" ratioRight="234" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.tm.terminal.view.TerminalView" label="Terminal 1"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -304,8 +291,7 @@
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.tcf.TraceView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -314,27 +300,21 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44935805" ratioLeft="315" ratioRight="386" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="com.xilinx.sdk.targetmanager.ui.XmdConsoleView" label="XMD Console"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
@@ -347,162 +327,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TREX/src/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TREX/src/player.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TREX/src/sprite.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TREX/src/sprite.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TREX/src/player.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/VGAtest/src/helloworld.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TREX/src/platform.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TREX/src/cactus.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TREX/src/cactus.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TREX/src/main.c"/>
 </editors>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2577" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="2098" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="5606" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="5668" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="4411" y="0"/>
+</item>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2577" y="0"/>
+</item>
 <item historyLabel="sprite.c" index="1">
-<position/>
+<position info="not_deleted" x="315" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5268" y="0"/>
-</item>
-<item historyLabel="sprite.c" index="1">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5598" y="0"/>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2577" y="0"/>
 </item>
 <item historyLabel="sprite.h" index="2">
-<position info="not_deleted" x="383" y="0"/>
+<position info="not_deleted" x="497" y="0"/>
 </item>
-<item historyLabel="sprite.c" index="1">
-<position/>
+<item historyLabel="player.c" index="0">
+<position info="not_deleted" x="11383" y="0"/>
 </item>
-<item historyLabel="helloworld.c" index="4">
-<position info="not_deleted" x="3" y="0"/>
+<item historyLabel="sprite.h" index="2">
+<position info="not_deleted" x="34" y="0"/>
 </item>
-<item historyLabel="player.c" index="3">
+<item historyLabel="cactus.h" index="3">
+<position info="not_deleted" x="346" y="0"/>
+</item>
+<item historyLabel="player.c" index="0">
 <position info="not_deleted" x="11071" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="307" y="0"/>
+<item historyLabel="cactus.h" index="3">
+<position info="not_deleted" x="346" y="0"/>
 </item>
-<item historyLabel="sprite.h" index="2">
-<position info="not_deleted" x="36" y="284"/>
+<item historyLabel="cactus.h" index="3">
+<position info="not_deleted" x="412" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="647" y="0"/>
+<item historyLabel="player.c" index="0">
+<position info="not_deleted" x="11071" y="0"/>
 </item>
-<item historyLabel="sprite.c" index="1">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="647" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="player.c" index="3">
-<position info="not_deleted" x="5302" y="1741"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="player.c" index="3">
-<position info="not_deleted" x="10153" y="92"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5283" y="0"/>
-</item>
-<item historyLabel="player.c" index="3">
-<position info="not_deleted" x="10053" y="0"/>
-</item>
-<item historyLabel="sprite.c" index="1">
-<position info="not_deleted" x="660" y="88"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5166" y="0"/>
-</item>
-<item historyLabel="sprite.h" index="2">
-<position info="not_deleted" x="36" y="284"/>
-</item>
-<item historyLabel="sprite.c" index="1">
-<position info="not_deleted" x="1252" y="0"/>
-</item>
-<item historyLabel="sprite.h" index="2">
-<position info="not_deleted" x="36" y="284"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5166" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="730" y="0"/>
-</item>
-<item historyLabel="sprite.c" index="1">
+<item historyLabel="cactus.c" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="player.c" index="3">
-<position info="not_deleted" x="7465" y="0"/>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2073" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="730" y="0"/>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2125" y="0"/>
 </item>
-<item historyLabel="platform.c" index="5">
-<position info="not_deleted" x="2351" y="0"/>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2144" y="0"/>
 </item>
-<item historyLabel="sprite.c" index="1">
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2152" y="0"/>
+</item>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2191" y="0"/>
+</item>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2221" y="0"/>
+</item>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2221" y="0"/>
+</item>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2448" y="0"/>
+</item>
+<item historyLabel="cactus.h" index="3">
+<position info="not_deleted" x="271" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
 <position/>
 </item>
-<item historyLabel="player.c" index="3">
-<position info="not_deleted" x="7603" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="2893" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="730" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="2330" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2362" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="2744" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
+<item historyLabel="main.c" index="5">
 <position/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="2208" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="2614" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="199" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="1566" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="199" y="0"/>
+<item historyLabel="cactus.h" index="3">
+<position info="not_deleted" x="271" y="0"/>
 </item>
-<item historyLabel="sprite.h" index="2">
-<position info="not_deleted" x="365" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="1566" y="0"/>
 </item>
-<item historyLabel="sprite.c" index="1">
-<position/>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2285" y="0"/>
 </item>
-<item historyLabel="sprite.c" index="1">
-<position info="not_deleted" x="860" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="810" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="199" y="0"/>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2737" y="0"/>
 </item>
-<item historyLabel="player.c" index="3">
-<position info="not_deleted" x="10263" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="942" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3546" y="0"/>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2728" y="38"/>
 </item>
-<item historyLabel="sprite.h" index="2">
-<position info="not_deleted" x="365" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="618" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5246" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="2548" y="0"/>
 </item>
-<item historyLabel="sprite.c" index="1">
-<position info="not_deleted" x="725" y="0"/>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2803" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="0">
-<position info="not_deleted" x="5246" y="0"/>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="2539" y="0"/>
+</item>
+<item historyLabel="cactus.c" index="4">
+<position info="not_deleted" x="2761" y="5"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="2646" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="318" y="0"/>
+</item>
+<item historyLabel="main.c" index="5">
+<position info="not_deleted" x="311" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="5">
+<position info="not_deleted" x="317" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -510,12 +490,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="topLeft"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="topRight"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -523,22 +497,36 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@7e17d2f4"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="TREX/src/platform.c">
-<persistable path="/TREX/src/platform.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="TREX/src/main.c">
+<persistable path="/TREX/src/main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="cactus.c" tooltip="TREX/src/cactus.c">
+<persistable path="/TREX/src/cactus.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="player.c" tooltip="TREX/src/player.c">
+<persistable path="/TREX/src/player.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sprite.c" tooltip="TREX/src/sprite.c">
 <persistable path="/TREX/src/sprite.c"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sprite.h" tooltip="TREX/src/sprite.h">
+<persistable path="/TREX/src/sprite.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="player.h" tooltip="TREX/src/player.h">
+<persistable path="/TREX/src/player.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="cactus.h" tooltip="TREX/src/cactus.h">
+<persistable path="/TREX/src/cactus.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="TREX/src/platform.c">
+<persistable path="/TREX/src/platform.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" tooltip="VGAtest/src/helloworld.c">
 <persistable path="/VGAtest/src/helloworld.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="player.c" tooltip="TREX/src/player.c">
-<persistable path="/TREX/src/player.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_globals.c" tooltip="Space_invaders/src/SI_globals.c">
 <persistable path="/Space_invaders/src/SI_globals.c"/>
@@ -557,21 +545,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_defines.h" tooltip="Space_invaders/src/SI_defines.h">
 <persistable path="/Space_invaders/src/SI_defines.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SI_main.c" tooltip="Space_invaders/src/SI_main.c">
-<persistable path="/Space_invaders/src/SI_main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="TREX/src/main.c">
-<persistable path="/TREX/src/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sprite.h" tooltip="TREX/src/sprite.h">
-<persistable path="/TREX/src/sprite.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="Space_invaders/src/platform.c">
-<persistable path="/Space_invaders/src/platform.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform_config.h" tooltip="Space_invaders/src/platform_config.h">
-<persistable path="/Space_invaders/src/platform_config.h"/>
 </file>
 </mruList>
 </workbench>
