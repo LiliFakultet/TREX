@@ -17,8 +17,9 @@ struct Cactus {
 };
 
 extern Cactus cacti[MAX_CACTUS_COUNT];
-void init_cacti();
-void move_cacti();
-void add_cactus();
-void show_cacti();
-void clear_cacti();
+
+void init_cacti(void);
+void move_cacti(void);
+void add_cactus(void);
+void show_cacti(void);
+void clear_cacti(void);

@@ -1,0 +1,21 @@
+#pragma once
+
+#define BIRD_ANIMATION_COUNT 2
+
+typedef struct Player Player;
+typedef enum PlayerState PlayerState;
+typedef enum PlayerAnimation PlayerAnimation;
+
+struct Bird {
+    int x;
+    int y;
+    int animation;
+    Sprite *sprites[BIRD_ANIMATION_COUNT];
+};
+
+extern Player player;
+
+void init_player(int x, int y);
+void show_player();
+void clear_player();
+void animate_player();

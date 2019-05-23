@@ -36,6 +36,6 @@ struct Player {
 extern Player player;
 
 void init_player(int x, int y);
-void show_player();
-void clear_player();
-void animate_player();
+void show_player(void);
+void clear_player(void);
+void animate_player(void);

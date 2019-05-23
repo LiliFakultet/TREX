@@ -1,0 +1,20 @@
+#pragma once
+
+#define MAX_BIRD_COUNT 2
+#define BIRD_ANIMATION_COUNT 2
+
+typedef struct Bird Bird;
+
+struct Bird {
+    int x;
+    int y;
+    int animation;
+    Sprite *sprites[BIRD_ANIMATION_COUNT];
+};
+
+extern Bird birds[MAX_BIRD_COUNT];
+
+void init_birds(void);
+void show_birds(void);
+void clear_birds();
+void animate_birds();

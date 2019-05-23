@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/bird.c \
 ../src/cactus.c \
 ../src/collision.c \
 ../src/input.c \
@@ -17,6 +18,7 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 OBJS += \
+./src/bird.o \
 ./src/cactus.o \
 ./src/collision.o \
 ./src/input.o \
@@ -27,6 +29,7 @@ OBJS += \
 ./src/vga.o 
 
 C_DEPS += \
+./src/bird.d \
 ./src/cactus.d \
 ./src/collision.d \
 ./src/input.d \
