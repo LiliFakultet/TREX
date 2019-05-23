@@ -1,0 +1,18 @@
+#include "collision.h"
+#include "player.h"
+#include "cactus.h"
+// tice
+
+bool check_collisions(void) {
+	int i;
+	for (i = 0; i < MAX_CACTUS_COUNT; i++) {
+		int h_span;
+
+		if (!cacti[i].active) {
+			continue;
+		}
+
+		h_span = abs(player.x - cacti[i].x);
+
+	}
+}

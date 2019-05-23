@@ -227,7 +227,7 @@ static Sprite running2 = {
 
 Player player;
 
-void init_player(uint32_t x, uint32_t y) {
+void init_player(int x, int y) {
     player.x = x;
     player.y = y;
     player.state = PLAYER_STATE_IDLE;

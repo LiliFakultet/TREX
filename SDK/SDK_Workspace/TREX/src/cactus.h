@@ -5,13 +5,13 @@
 #include "sprite.h"
 
 #define CACTUS_VARIANT_COUNT 1
-#define MAX_CACTUS_COUNT 4
+#define MAX_CACTUS_COUNT 20
 
 typedef struct Cactus Cactus;
 
 struct Cactus {
-    uint32_t x;
-    uint32_t y;
+    int x;
+    int y;
     bool active;
     Sprite *sprite;
 };

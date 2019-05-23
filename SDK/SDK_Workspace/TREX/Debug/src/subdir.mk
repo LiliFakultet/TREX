@@ -5,6 +5,8 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/cactus.c \
+../src/collision.c \
+../src/input.c \
 ../src/main.c \
 ../src/platform.c \
 ../src/player.c \
@@ -15,6 +17,8 @@ LD_SRCS += \
 
 OBJS += \
 ./src/cactus.o \
+./src/collision.o \
+./src/input.o \
 ./src/main.o \
 ./src/platform.o \
 ./src/player.o \
@@ -22,6 +26,8 @@ OBJS += \
 
 C_DEPS += \
 ./src/cactus.d \
+./src/collision.d \
+./src/input.d \
 ./src/main.d \
 ./src/platform.d \
 ./src/player.d \

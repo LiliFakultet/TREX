@@ -42,7 +42,7 @@ static const uint32_t cactus0[] = {
 static Sprite cactus_sprites[CACTUS_VARIANT_COUNT] = {{cactus0, 4, 32}};
 
 void init_cacti() {
-	size_t i;
+	int i;
 	for (i = 0; i < MAX_CACTUS_COUNT; i++) {
 		cacti[i].active = false;
 	}

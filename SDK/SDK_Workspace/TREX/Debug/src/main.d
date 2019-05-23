@@ -13,7 +13,8 @@ src/main.d: ../src/main.c ../src/platform.h ../src/platform_config.h \
  ../../TREX_bsp/microblaze_0/include/xparameters.h \
  ../../TREX_bsp/microblaze_0/include/xstatus.h \
  ../../TREX_bsp/microblaze_0/include/xintc_l.h \
- ../../TREX_bsp/microblaze_0/include/xil_io.h
+ ../../TREX_bsp/microblaze_0/include/xil_io.h ../src/collision.h \
+ ../src/input.h
 
 ../src/platform.h:
 
@@ -52,3 +53,7 @@ src/main.d: ../src/main.c ../src/platform.h ../src/platform_config.h \
 ../../TREX_bsp/microblaze_0/include/xintc_l.h:
 
 ../../TREX_bsp/microblaze_0/include/xil_io.h:
+
+../src/collision.h:
+
+../src/input.h:
