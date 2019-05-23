@@ -1,0 +1,25 @@
+#pragma once
+
+#include "xio.h"
+#include "xil_io.h"
+#include "fsl.h"
+
+#define GRAPHICS_MEM_OFF 0x2000000
+#define TEXT_MEM_OFF 0x1000000
+
+#define PUT_TO_FSL(address, value) \
+	do {                           \
+		putfsl(address, 0);        \
+		putfsl(value, 0);          \
+	} while(0)
+
+
+
+void init_vga(void);
+void init_vga_interrupt(void (*irq_handler)(void *));
+
+void clear_text_screen(void);
+void print_string(const char *string, int length);
+void set_cursor(Xuint32 value);
+
+void clear_graphics_screen();

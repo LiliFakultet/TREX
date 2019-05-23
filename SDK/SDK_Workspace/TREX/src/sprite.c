@@ -1,7 +1,5 @@
 #include "sprite.h"
-#include "fsl.h"
-
-//Xuint32 background[480 * 640 / 8];
+#include "vga.h"
 
 void show_sprite(const Sprite *sprite, int x, int y) {
 	int i;
@@ -13,7 +11,7 @@ void show_sprite(const Sprite *sprite, int x, int y) {
         for (j = 0; j < sprite->height; j++) {
         	int offset;
 
-            const int index = (y + j) * (640 / 8) + (x + i);
+            const int index = (y + j) * DISPLAY_WIDTH + (x + i);
             const uint32_t sprite_color = sprite->image[j * sprite->width + i];
             uint32_t out_color = 0;
             for (offset = 28; offset >= 0; offset -= 4) {
@@ -38,7 +36,7 @@ void clear_sprite(const Sprite *sprite, int x, int y) {
 
     for (i = 0; i < sprite->width; i++) {
         for (j = 0; j < sprite->height; j++) {
-        	const int index = (y + j) * (640 / 8) + (x + i);
+        	const int index = (y + j) * DISPLAY_WIDTH + (x + i);
             //PUT_TO_FSL(index, background[index]);
         	PUT_TO_FSL(index, 0xFFFFFFFF);
         }

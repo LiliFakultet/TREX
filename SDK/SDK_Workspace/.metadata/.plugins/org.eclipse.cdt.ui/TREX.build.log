@@ -1,36 +1,54 @@
-14:05:32 **** Auto Build of configuration Debug for project TREX ****
+15:32:32 **** Incremental Build of configuration Release for project TREX ****
 make all 
+'Building file: ../src/cactus.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/cactus.d" -MT"src/cactus.d" -o "src/cactus.o" "../src/cactus.c"
+'Finished building: ../src/cactus.c'
+' '
+'Building file: ../src/collision.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/collision.d" -MT"src/collision.d" -o "src/collision.o" "../src/collision.c"
+'Finished building: ../src/collision.c'
+' '
+'Building file: ../src/input.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/input.d" -MT"src/input.d" -o "src/input.o" "../src/input.c"
+'Finished building: ../src/input.c'
+' '
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -pedantic -Os -g3 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-In file included from ../../TREX_bsp/microblaze_0/include/fsl.h:5:0,
-                 from ../src/sprite.h:4,
-                 from ../src/player.h:4,
-                 from ../src/main.c:5:
-../../TREX_bsp/microblaze_0/include/mb_interface.h:1:1: warning: C++ style comments are not allowed in ISO C90 [enabled by default]
-../../TREX_bsp/microblaze_0/include/mb_interface.h:1:1: warning: (this will be reported only once per input file) [enabled by default]
-In file included from ../src/player.h:4:0,
-                 from ../src/main.c:5:
-../src/sprite.h:20:1: warning: C++ style comments are not allowed in ISO C90 [enabled by default]
-../src/sprite.h:20:1: warning: (this will be reported only once per input file) [enabled by default]
-In file included from ../../TREX_bsp/microblaze_0/include/xil_io.h:77:0,
-                 from ../src/main.c:9:
-../../TREX_bsp/microblaze_0/include/xil_types.h:132:23: warning: ISO C90 does not support 'long long' [-Wlong-long]
-../../TREX_bsp/microblaze_0/include/xil_types.h:137:14: warning: ISO C90 does not support 'long long' [-Wlong-long]
-../src/main.c: In function 'init_interrupt_controller':
-../src/main.c:160:2: warning: C++ style comments are not allowed in ISO C90 [enabled by default]
-../src/main.c:160:2: warning: (this will be reported only once per input file) [enabled by default]
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
 'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/player.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/player.d" -MT"src/player.d" -o "src/player.o" "../src/player.c"
+'Finished building: ../src/player.c'
+' '
+'Building file: ../src/sprite.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/sprite.d" -MT"src/sprite.d" -o "src/sprite.o" "../src/sprite.c"
+'Finished building: ../src/sprite.c'
+' '
+'Building file: ../src/vga.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/vga.d" -MT"src/vga.d" -o "src/vga.o" "../src/vga.c"
+'Finished building: ../src/vga.c'
 ' '
 'Building target: TREX.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "TREX.elf"  ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: TREX.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  17992	   1456	   2688	  22136	   5678	TREX.elf
+  16434	   1476	   2514	  20424	   4fc8	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -47,5 +65,5 @@ elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
 
-14:05:33 Build Finished (took 1s.475ms)
+15:32:35 Build Finished (took 2s.472ms)
 

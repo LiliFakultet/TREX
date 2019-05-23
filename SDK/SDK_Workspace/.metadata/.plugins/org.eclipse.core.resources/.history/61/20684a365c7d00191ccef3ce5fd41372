@@ -1,0 +1,7 @@
+#pragma once
+
+#define GRAPHICS_MEM_OFF 0x2000000
+#define TEXT_MEM_OFF 0x1000000
+
+#define VGA_PERIPH_MEM_mWriteMemory(Address, Data) \
+ 	Xil_Out32(Address, (Xuint32)(Data))

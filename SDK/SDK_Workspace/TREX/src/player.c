@@ -1,9 +1,7 @@
+#include <stdint.h>
 #include "player.h"
 
-#define PLAYER_WIDTH 4
-#define PLAYER_HEIGHT 32
-
-static const Xuint32 player_idle[] = {
+static const uint32_t player_idle[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xF0000000, 0x0000FFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xF0000000, 0x0000FFFF,
@@ -38,7 +36,7 @@ static const Xuint32 player_idle[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF
 };
 
-static const Xuint32 player_dead[] = {
+static const uint32_t player_dead[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xF0000000, 0x0000FFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xF0000000, 0x0000FFFF,
@@ -73,7 +71,7 @@ static const Xuint32 player_dead[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF
 };
 
-static const Xuint32 player_running1[] = {
+static const uint32_t player_running1[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xF0000000, 0x0000FFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xF0000000, 0x0000FFFF,
@@ -108,7 +106,7 @@ static const Xuint32 player_running1[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF
 };
 
-static const Xuint32 player_running2[] = {
+static const uint32_t player_running2[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xF0000000, 0x0000FFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xF0000000, 0x0000FFFF,
@@ -143,7 +141,7 @@ static const Xuint32 player_running2[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF
 };
 
-static const Xuint32 player_ducking1[] = {
+static const uint32_t player_ducking1[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
     0xFF00FFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFF000000, 0x0000FFFF,
@@ -166,7 +164,7 @@ static const Xuint32 player_ducking1[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF
 };
 
-static const Xuint32 player_ducking2[] = {
+static const uint32_t player_ducking2[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
     0xFF00FFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFF000000, 0x0000FFFF,
@@ -203,26 +201,26 @@ static Sprite ducking2 = {
 
 static Sprite idle = {
     player_idle,
-    PLAYER_WIDTH,
-    PLAYER_HEIGHT
+    4,
+    32
 };
 
 static Sprite dead = {
     player_dead,
-    PLAYER_WIDTH,
-    PLAYER_HEIGHT
+    4,
+    32
 };
 
 static Sprite running1 = {
     player_running1,
-    PLAYER_WIDTH,
-    PLAYER_HEIGHT
+    4,
+    32
 };
 
 static Sprite running2 = {
     player_running2,
-    PLAYER_WIDTH,
-    PLAYER_HEIGHT
+    4,
+    32
 };
 
 Player player;

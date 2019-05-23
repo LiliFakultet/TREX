@@ -31,7 +31,7 @@ void handle_input() {
     }
 
     if (jumping) {
-        if (player.y > 480 / 2 - 82) {
+        if (player.y > DISPLAY_HEIGHT / 2 - 82) {
             player.y -= 5;
         }
         else {
@@ -40,7 +40,7 @@ void handle_input() {
     }
 
     if (!jumping) {
-        if (player.y < 480 / 2) {
+        if (player.y < DISPLAY_HEIGHT / 2) {
             player.y += 5;
         }
         else if (player.state == PLAYER_STATE_JUMPING) {

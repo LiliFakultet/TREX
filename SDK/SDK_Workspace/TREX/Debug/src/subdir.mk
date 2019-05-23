@@ -10,7 +10,8 @@ C_SRCS += \
 ../src/main.c \
 ../src/platform.c \
 ../src/player.c \
-../src/sprite.c 
+../src/sprite.c \
+../src/vga.c 
 
 LD_SRCS += \
 ../src/lscript.ld 
@@ -22,7 +23,8 @@ OBJS += \
 ./src/main.o \
 ./src/platform.o \
 ./src/player.o \
-./src/sprite.o 
+./src/sprite.o \
+./src/vga.o 
 
 C_DEPS += \
 ./src/cactus.d \
@@ -31,7 +33,8 @@ C_DEPS += \
 ./src/main.d \
 ./src/platform.d \
 ./src/player.d \
-./src/sprite.d 
+./src/sprite.d \
+./src/vga.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -1,0 +1,15 @@
+#include "vga.h"
+#include "xintc.h"
+
+static XIntc xintc;
+static Xuint32 cursor_position;
+
+void init_vga_interrupt(void (*irq_handler)(void *)) {
+	XIo_Out32(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x54, 479);
+	XIo_Out32(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x58, 1);
+	XIntc_Initialize (&xintc, XPAR_INTC_0_DEVICE_ID);
+	XIntc_Connect (&xintc, 0, (XInterruptHandler) irq_handler, NULL);
+	XIntc_Start(&xintc, XIN_REAL_MODE);
+	XIntc_Enable (&xintc, 0);
+	microblaze_enable_interrupts();
+}
