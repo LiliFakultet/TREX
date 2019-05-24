@@ -1,0 +1,38 @@
+#include <stdlib.h>
+#include "collision.h"
+#include "player.h"
+#include "cactus.h"
+#include "sprite.h"
+#include "bird.h"
+
+bool check_collisions(void) {
+	int i;
+	for (i = 0; i < MAX_CACTUS_COUNT; i++) {
+		if (!cacti[i].active) {
+			continue;
+		}
+
+		if (player.x < cacti[i].x + cacti[i].sprite->width &&
+		   player.x + player.sprites[player.animation]->width > cacti[i].x &&
+		   player.y < cacti[i].y + cacti[i].sprite->height &&
+		   player.y + player.sprites[player.animation]->height > cacti[i].y) {
+			return true;
+		}
+	}
+
+	for (i = 0; i < MAX_BIRD_COUNT; i++) {
+		if (!birds[i].active) {
+			continue;
+		}
+
+		if (player.x < birds[i].x + birds[i].sprite->width &&
+		   player.x + player.sprites[player.animation]->width > birds[i].x &&
+		   player.y < birds[i].y + birds[i].sprite->height &&
+		   player.y + player.sprites[player.animation]->height > birds[i].y) {
+			return true;
+		}
+
+	}
+
+	return false;
+}

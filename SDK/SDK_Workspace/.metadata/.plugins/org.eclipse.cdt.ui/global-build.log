@@ -1,11 +1,11 @@
-16:03:12 **** Clean-only build of configuration Release for project TREX ****
+16:25:50 **** Clean-only build of configuration Release for project TREX ****
 make clean 
 rm -rf  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o  ./src/bird.d ./src/cactus.d ./src/collision.d ./src/input.d ./src/main.d ./src/platform.d ./src/player.d ./src/sprite.d ./src/vga.d  TREX.elf.size  TREX.elf.elfcheck  TREX.elf
 ' '
-16:03:12 **** Clean-only build of project TREX_bsp ****
+16:25:50 **** Clean-only build of project TREX_bsp ****
 make -k clean 
 rm -rf microblaze_0
-16:03:12 **** Build of project TREX_bsp ****
+16:25:51 **** Build of project TREX_bsp ****
 make -k all 
 libgen -hw ../TREX_hw_platform/system.xml\
 	       \
@@ -41,7 +41,7 @@ Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
 "Compiling cpu"
 Running execs_generate.
 'Finished building libraries'
-16:03:17 **** Build of configuration Release for project TREX ****
+16:25:59 **** Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/bird.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -96,7 +96,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18430	   1500	   2548	  22478	   57ce	TREX.elf
+  18610	   1500	   2548	  22658	   5882	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -112,16 +112,19 @@ ELF file	: TREX.elf
 elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
-16:03:30 **** Auto Build of project TREX_bsp ****
+16:26:11 **** Auto Build of configuration Release for project TREX ****
+make all 
+make: Ništa za napraviti za `all'.
+16:26:21 **** Auto Build of project TREX_bsp ****
 make -k all 
 'Finished building libraries'
-16:03:31 **** Auto Build of project Space_invaders_bsp ****
+16:26:21 **** Auto Build of project Space_invaders_bsp ****
 make -k all 
 'Finished building libraries'
-16:03:31 **** Auto Build of project VGAtest_bsp ****
+16:26:22 **** Auto Build of project VGAtest_bsp ****
 make -k all 
 'Finished building libraries'
-16:04:10 **** Auto Build of configuration Release for project TREX ****
+16:27:11 **** Auto Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -136,7 +139,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18406	   1500	   2550	  22456	   57b8	TREX.elf
+  18622	   1500	   2550	  22672	   5890	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -152,16 +155,16 @@ ELF file	: TREX.elf
 elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
-16:04:25 **** Auto Build of project TREX_bsp ****
+16:27:23 **** Auto Build of project TREX_bsp ****
 make -k all 
 'Finished building libraries'
-16:04:25 **** Auto Build of project Space_invaders_bsp ****
+16:27:23 **** Auto Build of project Space_invaders_bsp ****
 make -k all 
 'Finished building libraries'
-16:04:25 **** Auto Build of project VGAtest_bsp ****
+16:27:23 **** Auto Build of project VGAtest_bsp ****
 make -k all 
 'Finished building libraries'
-16:04:55 **** Auto Build of configuration Release for project TREX ****
+16:27:35 **** Auto Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -176,7 +179,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18414	   1500	   2548	  22462	   57be	TREX.elf
+  18614	   1500	   2548	  22662	   5886	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -192,305 +195,41 @@ ELF file	: TREX.elf
 elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
-16:05:06 **** Auto Build of project TREX_bsp ****
+16:27:45 **** Auto Build of project TREX_bsp ****
 make -k all 
 'Finished building libraries'
-16:05:06 **** Auto Build of project Space_invaders_bsp ****
+16:27:46 **** Auto Build of project Space_invaders_bsp ****
 make -k all 
 'Finished building libraries'
-16:05:06 **** Auto Build of project VGAtest_bsp ****
+16:27:46 **** Auto Build of project VGAtest_bsp ****
 make -k all 
 'Finished building libraries'
-16:05:14 **** Auto Build of configuration Release for project TREX ****
+16:29:49 **** Auto Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: TREX.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: TREX.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size TREX.elf  |tee "TREX.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  18422	   1500	   2550	  22472	   57c8	TREX.elf
-'Finished building: TREX.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
-TREX.elf 
-
-ELF file	: TREX.elf
-elfcheck passed.
-'Finished building: TREX.elf.elfcheck'
-' '
-16:05:37 **** Auto Build of project TREX_bsp ****
-make -k all 
-'Finished building libraries'
-16:05:37 **** Auto Build of project Space_invaders_bsp ****
-make -k all 
-'Finished building libraries'
-16:05:37 **** Auto Build of project VGAtest_bsp ****
-make -k all 
-'Finished building libraries'
-16:05:58 **** Auto Build of configuration Release for project TREX ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: TREX.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: TREX.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size TREX.elf  |tee "TREX.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  18430	   1500	   2548	  22478	   57ce	TREX.elf
-'Finished building: TREX.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
-TREX.elf 
-
-ELF file	: TREX.elf
-elfcheck passed.
-'Finished building: TREX.elf.elfcheck'
-' '
-16:06:09 **** Auto Build of project TREX_bsp ****
-make -k all 
-'Finished building libraries'
-16:06:09 **** Auto Build of project Space_invaders_bsp ****
-make -k all 
-'Finished building libraries'
-16:06:09 **** Auto Build of project VGAtest_bsp ****
-make -k all 
-'Finished building libraries'
-16:07:21 **** Auto Build of project TREX_bsp ****
-make -k all 
-'Finished building libraries'
-16:07:21 **** Auto Build of project Space_invaders_bsp ****
-make -k all 
-'Finished building libraries'
-16:07:21 **** Auto Build of project VGAtest_bsp ****
-make -k all 
-'Finished building libraries'
-16:08:07 **** Auto Build of configuration Release for project TREX ****
-make all 
-'Building file: ../src/bird.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/bird.d" -MT"src/bird.d" -o "src/bird.o" "../src/bird.c"
-'Finished building: ../src/bird.c'
-' '
-'Building target: TREX.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: TREX.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size TREX.elf  |tee "TREX.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  18434	   1500	   2554	  22488	   57d8	TREX.elf
-'Finished building: TREX.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
-TREX.elf 
-
-ELF file	: TREX.elf
-elfcheck passed.
-'Finished building: TREX.elf.elfcheck'
-' '
-16:08:12 **** Auto Build of configuration Release for project TREX ****
-make all 
-'Building file: ../src/bird.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/bird.d" -MT"src/bird.d" -o "src/bird.o" "../src/bird.c"
-'Finished building: ../src/bird.c'
-' '
-'Building target: TREX.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: TREX.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size TREX.elf  |tee "TREX.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  18434	   1500	   2554	  22488	   57d8	TREX.elf
-'Finished building: TREX.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
-TREX.elf 
-
-ELF file	: TREX.elf
-elfcheck passed.
-'Finished building: TREX.elf.elfcheck'
-' '
-16:08:25 **** Auto Build of project TREX_bsp ****
-make -k all 
-'Finished building libraries'
-16:08:26 **** Auto Build of project Space_invaders_bsp ****
-make -k all 
-'Finished building libraries'
-16:08:26 **** Auto Build of project VGAtest_bsp ****
-make -k all 
-'Finished building libraries'
-16:10:06 **** Auto Build of configuration Release for project TREX ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: TREX.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: TREX.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size TREX.elf  |tee "TREX.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  18466	   1500	   2554	  22520	   57f8	TREX.elf
-'Finished building: TREX.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
-TREX.elf 
-
-ELF file	: TREX.elf
-elfcheck passed.
-'Finished building: TREX.elf.elfcheck'
-' '
-16:10:17 **** Auto Build of project TREX_bsp ****
-make -k all 
-'Finished building libraries'
-16:10:17 **** Auto Build of project Space_invaders_bsp ****
-make -k all 
-'Finished building libraries'
-16:10:17 **** Auto Build of project VGAtest_bsp ****
-make -k all 
-'Finished building libraries'
-16:10:26 **** Auto Build of configuration Release for project TREX ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: TREX.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: TREX.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size TREX.elf  |tee "TREX.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  18450	   1500	   2554	  22504	   57e8	TREX.elf
-'Finished building: TREX.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
-TREX.elf 
-
-ELF file	: TREX.elf
-elfcheck passed.
-'Finished building: TREX.elf.elfcheck'
-' '
-16:10:35 **** Auto Build of project TREX_bsp ****
-make -k all 
-'Finished building libraries'
-16:10:35 **** Auto Build of project Space_invaders_bsp ****
-make -k all 
-'Finished building libraries'
-16:10:35 **** Auto Build of project VGAtest_bsp ****
-make -k all 
-'Finished building libraries'
-16:11:40 **** Auto Build of configuration Release for project TREX ****
-make all 
-'Building file: ../src/bird.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/bird.d" -MT"src/bird.d" -o "src/bird.o" "../src/bird.c"
-'Finished building: ../src/bird.c'
-' '
-'Building target: TREX.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: TREX.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size TREX.elf  |tee "TREX.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  18450	   1500	   2554	  22504	   57e8	TREX.elf
-'Finished building: TREX.elf.size'
-' '
-'Invoking: Xilinx ELF Check'
-elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
-elfcheck
-Xilinx EDK 14.6 Build EDK_P.68d
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
-TREX.elf 
-
-ELF file	: TREX.elf
-elfcheck passed.
-'Finished building: TREX.elf.elfcheck'
-' '
-16:11:52 **** Auto Build of project TREX_bsp ****
-make -k all 
-'Finished building libraries'
-16:11:52 **** Auto Build of project Space_invaders_bsp ****
-make -k all 
-'Finished building libraries'
-16:11:52 **** Auto Build of project VGAtest_bsp ****
-make -k all 
-'Finished building libraries'
-16:13:29 **** Auto Build of configuration Release for project TREX ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'vga_interrupt_handler':
-../src/main.c:91:17: error: 'CACTUS_DELAY' undeclared (first use in this function)
-../src/main.c:91:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:97:2: error: expected identifier or '(' before 'else'
+../src/main.c:101:2: error: expected identifier or '(' before 'if'
+../src/main.c:105:5: error: expected identifier or '(' before 'if'
+../src/main.c:110:5: error: expected identifier or '(' before 'if'
+../src/main.c:114:5: error: expected identifier or '(' before 'if'
+../src/main.c:118:5: error: expected identifier or '(' before 'if'
+../src/main.c:125:5: warning: data definition has no type or storage class [enabled by default]
+../src/main.c:125:5: warning: type defaults to 'int' in declaration of 'show_player' [-Wimplicit-int]
+../src/main.c:125:5: error: conflicting types for 'show_player'
+../src/player.h:39:6: note: previous declaration of 'show_player' was here
+../src/main.c:126:5: warning: data definition has no type or storage class [enabled by default]
+../src/main.c:126:5: warning: type defaults to 'int' in declaration of 'show_cacti' [-Wimplicit-int]
+../src/main.c:126:5: error: conflicting types for 'show_cacti'
+../src/cactus.h:24:6: note: previous declaration of 'show_cacti' was here
+../src/main.c:127:5: warning: data definition has no type or storage class [enabled by default]
+../src/main.c:127:5: warning: type defaults to 'int' in declaration of 'show_birds' [-Wimplicit-int]
+../src/main.c:127:5: error: conflicting types for 'show_birds'
+../src/bird.h:25:6: note: previous declaration of 'show_birds' was here
+../src/main.c:128:1: error: expected identifier or '(' before '}' token
 make: *** [src/main.o] Greška 1
-16:13:34 **** Auto Build of configuration Release for project TREX ****
+16:30:11 **** Auto Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -505,7 +244,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18466	   1500	   2554	  22520	   57f8	TREX.elf
+  18618	   1500	   2548	  22666	   588a	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -521,7 +260,16 @@ ELF file	: TREX.elf
 elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
-16:13:46 **** Auto Build of configuration Release for project TREX ****
+16:30:23 **** Auto Build of project TREX_bsp ****
+make -k all 
+'Finished building libraries'
+16:30:23 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+16:30:23 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+16:31:19 **** Auto Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -536,7 +284,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18490	   1500	   2548	  22538	   580a	TREX.elf
+  18674	   1500	   2554	  22728	   58c8	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -552,7 +300,16 @@ ELF file	: TREX.elf
 elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
-16:14:17 **** Auto Build of configuration Release for project TREX ****
+16:31:29 **** Auto Build of project TREX_bsp ****
+make -k all 
+'Finished building libraries'
+16:31:29 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+16:31:30 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+16:36:48 **** Auto Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -567,7 +324,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18498	   1500	   2554	  22552	   5818	TREX.elf
+  18674	   1500	   2554	  22728	   58c8	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -583,7 +340,16 @@ ELF file	: TREX.elf
 elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
-16:14:26 **** Auto Build of configuration Release for project TREX ****
+16:39:28 **** Auto Build of project TREX_bsp ****
+make -k all 
+'Finished building libraries'
+16:39:28 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+16:39:28 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+16:39:38 **** Auto Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -598,7 +364,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18506	   1500	   2548	  22554	   581a	TREX.elf
+  18634	   1500	   2554	  22688	   58a0	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -614,7 +380,7 @@ ELF file	: TREX.elf
 elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
-16:15:09 **** Auto Build of configuration Release for project TREX ****
+16:39:44 **** Auto Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -629,7 +395,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18546	   1500	   2554	  22600	   5848	TREX.elf
+  18678	   1500	   2548	  22726	   58c6	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -645,7 +411,59 @@ ELF file	: TREX.elf
 elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
-16:15:14 **** Auto Build of configuration Release for project TREX ****
+16:39:54 **** Auto Build of project TREX_bsp ****
+make -k all 
+'Finished building libraries'
+16:39:54 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+16:39:55 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+16:40:09 **** Auto Build of project TREX_bsp ****
+make -k all 
+'Finished building libraries'
+16:40:09 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+16:40:09 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+16:41:19 **** Auto Build of configuration Release for project TREX ****
+make all 
+make: Ništa za napraviti za `all'.
+16:41:54 **** Auto Build of configuration Release for project TREX ****
+make all 
+'Building file: ../src/vga.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/vga.d" -MT"src/vga.d" -o "src/vga.o" "../src/vga.c"
+'Finished building: ../src/vga.c'
+' '
+'Building target: TREX.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TREX.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size TREX.elf  |tee "TREX.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18726	   1500	   2548	  22774	   58f6	TREX.elf
+'Finished building: TREX.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+TREX.elf 
+
+ELF file	: TREX.elf
+elfcheck passed.
+'Finished building: TREX.elf.elfcheck'
+' '
+16:42:16 **** Auto Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -660,7 +478,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18546	   1500	   2554	  22600	   5848	TREX.elf
+  18754	   1500	   2554	  22808	   5918	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -676,31 +494,21 @@ ELF file	: TREX.elf
 elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
-16:15:25 **** Auto Build of project TREX_bsp ****
+16:42:26 **** Auto Build of project TREX_bsp ****
 make -k all 
 'Finished building libraries'
-16:15:25 **** Auto Build of project Space_invaders_bsp ****
+16:42:27 **** Auto Build of project Space_invaders_bsp ****
 make -k all 
 'Finished building libraries'
-16:15:25 **** Auto Build of project VGAtest_bsp ****
+16:42:27 **** Auto Build of project VGAtest_bsp ****
 make -k all 
 'Finished building libraries'
-16:17:03 **** Auto Build of configuration Release for project TREX ****
+16:43:27 **** Auto Build of configuration Release for project TREX ****
 make all 
-'Building file: ../src/collision.c'
+'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/collision.d" -MT"src/collision.d" -o "src/collision.o" "../src/collision.c"
-../src/collision.c: In function 'check_collisions':
-../src/collision.c:31:18: error: 'MAX_BIRD_COUNT' undeclared (first use in this function)
-../src/collision.c:31:18: note: each undeclared identifier is reported only once for each function it appears in
-../src/collision.c:35:9: error: 'birds' undeclared (first use in this function)
-make: *** [src/collision.o] Greška 1
-16:17:10 **** Auto Build of configuration Release for project TREX ****
-make all 
-'Building file: ../src/collision.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/collision.d" -MT"src/collision.d" -o "src/collision.o" "../src/collision.c"
-'Finished building: ../src/collision.c'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
 ' '
 'Building target: TREX.elf'
 'Invoking: MicroBlaze gcc linker'
@@ -710,7 +518,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18702	   1500	   2550	  22752	   58e0	TREX.elf
+  18646	   1500	   2548	  22694	   58a6	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -726,12 +534,219 @@ ELF file	: TREX.elf
 elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
-16:17:26 **** Auto Build of project TREX_bsp ****
+16:43:38 **** Auto Build of project TREX_bsp ****
 make -k all 
 'Finished building libraries'
-16:17:26 **** Auto Build of project Space_invaders_bsp ****
+16:43:38 **** Auto Build of project Space_invaders_bsp ****
 make -k all 
 'Finished building libraries'
-16:17:26 **** Auto Build of project VGAtest_bsp ****
+16:43:38 **** Auto Build of project VGAtest_bsp ****
 make -k all 
 'Finished building libraries'
+16:45:06 **** Auto Build of configuration Release for project TREX ****
+make all 
+make: Ništa za napraviti za `all'.
+16:47:11 **** Auto Build of configuration Release for project TREX ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: TREX.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TREX.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size TREX.elf  |tee "TREX.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18754	   1500	   2554	  22808	   5918	TREX.elf
+'Finished building: TREX.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+TREX.elf 
+
+ELF file	: TREX.elf
+elfcheck passed.
+'Finished building: TREX.elf.elfcheck'
+' '
+16:47:22 **** Auto Build of configuration Release for project TREX ****
+make all 
+make: Ništa za napraviti za `all'.
+16:47:28 **** Auto Build of configuration Release for project TREX ****
+make all 
+'Building file: ../src/vga.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/vga.d" -MT"src/vga.d" -o "src/vga.o" "../src/vga.c"
+'Finished building: ../src/vga.c'
+' '
+'Building target: TREX.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `vga_interrupt_handler':
+(.text+0x1d4): undefined reference to `toggle_colors'
+collect2: ld returned 1 exit status
+make: *** [TREX.elf] Greška 1
+16:47:43 **** Auto Build of configuration Release for project TREX ****
+make all 
+'Building file: ../src/vga.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/vga.d" -MT"src/vga.d" -o "src/vga.o" "../src/vga.c"
+'Finished building: ../src/vga.c'
+' '
+'Building target: TREX.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `vga_interrupt_handler':
+(.text+0x1d4): undefined reference to `toggle_colors'
+collect2: ld returned 1 exit status
+make: *** [TREX.elf] Greška 1
+16:48:03 **** Auto Build of configuration Release for project TREX ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: TREX.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TREX.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size TREX.elf  |tee "TREX.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18774	   1500	   2550	  22824	   5928	TREX.elf
+'Finished building: TREX.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+TREX.elf 
+
+ELF file	: TREX.elf
+elfcheck passed.
+'Finished building: TREX.elf.elfcheck'
+' '
+16:48:17 **** Auto Build of project TREX_bsp ****
+make -k all 
+'Finished building libraries'
+16:48:17 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+16:48:17 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+16:48:56 **** Auto Build of configuration Release for project TREX ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: TREX.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TREX.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size TREX.elf  |tee "TREX.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18694	   1500	   2550	  22744	   58d8	TREX.elf
+'Finished building: TREX.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+TREX.elf 
+
+ELF file	: TREX.elf
+elfcheck passed.
+'Finished building: TREX.elf.elfcheck'
+' '
+16:49:06 **** Auto Build of project TREX_bsp ****
+make -k all 
+'Finished building libraries'
+16:49:06 **** Auto Build of project Space_invaders_bsp ****
+make -k all 
+'Finished building libraries'
+16:49:06 **** Auto Build of project VGAtest_bsp ****
+make -k all 
+'Finished building libraries'
+16:49:16 **** Auto Build of configuration Release for project TREX ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: TREX.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TREX.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size TREX.elf  |tee "TREX.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18774	   1500	   2550	  22824	   5928	TREX.elf
+'Finished building: TREX.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+TREX.elf 
+
+ELF file	: TREX.elf
+elfcheck passed.
+'Finished building: TREX.elf.elfcheck'
+' '
+16:50:30 **** Auto Build of configuration Release for project TREX ****
+make all 
+'Building file: ../src/vga.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/vga.d" -MT"src/vga.d" -o "src/vga.o" "../src/vga.c"
+'Finished building: ../src/vga.c'
+' '
+'Building target: TREX.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TREX.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size TREX.elf  |tee "TREX.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18774	   1500	   2550	  22824	   5928	TREX.elf
+'Finished building: TREX.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck TREX.elf -hw ../../TREX_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../TREX_hw_platform/system.xml -pe microblaze_0
+TREX.elf 
+
+ELF file	: TREX.elf
+elfcheck passed.
+'Finished building: TREX.elf.elfcheck'
+' '

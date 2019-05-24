@@ -19,4 +19,6 @@ void clear_text_screen(void);
 void print_string(const char *string, int length);
 void set_cursor(int position);
 
-void clear_graphics_screen();
+void clear_graphics_screen(void);
+void night_mode(void);
+void day_mode(void);

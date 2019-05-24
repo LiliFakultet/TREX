@@ -4,51 +4,46 @@
 #include "cactus.h"
 #include "sprite.h"
 #include "bird.h"
-// tice
 
 bool check_collisions(void) {
 	int i;
+	const int player_height = player.sprites[player.animation]->height;
+	const int player_width = player.sprites[player.animation]->width;
+
 	for (i = 0; i < MAX_CACTUS_COUNT; i++) {
-		int h_span;
-		int v_span;
+		const int cactus_height = cacti[i].sprite->height;
+		const int cactus_width = cacti[i].sprite->width;
 
 		if (!cacti[i].active) {
 			continue;
 		}
 
-		h_span = abs(player.x - cacti[i].x);
-		v_span = abs(player.y - cacti[i].y);
+		if (player.x < cacti[i].x + cactus_width
+			&& player.x + player_width > cacti[i].x
+			&& player.y < cacti[i].y + cactus_height
+			&& player.y + player_height > cacti[i].y) {
 
-		// TODO: umesto return true treba da se proveri pixel po pixel kolizija sprite-ova tako da 0xF ne izaziva koliziju
-		if (player.sprites[player.animation]->width >= h_span && player.sprites[player.animation]->height >= v_span) {
 			return true;
 		}
-		else if (cacti[i].sprite->width >= h_span && cacti[i].sprite->height >= v_span) {
+	}
+
+	for (i = 0; i < MAX_BIRD_COUNT; i++) {
+		const int bird_height = birds[i].sprite->height;
+		const int bird_width = birds[i].sprite->width;
+
+		if (!birds[i].active) {
+			continue;
+		}
+
+		if (player.x < birds[i].x + bird_width
+			&& player.x + player_width > birds[i].x
+			&& player.y < birds[i].y + bird_height
+			&& player.y + player_height > birds[i].y) {
+
 			return true;
 		}
 
 	}
-
-	for (i = 0; i < MAX_BIRD_COUNT; i++) {
-			int h_span;
-			int v_span;
-
-			if (!birds[i].active) {
-				continue;
-			}
-
-			h_span = abs(player.x - birds[i].x);
-			v_span = abs(player.y - birds[i].y);
-
-			// TODO: umesto return true treba da se proveri pixel po pixel kolizija sprite-ova tako da 0xF ne izaziva koliziju
-			if (player.sprites[player.animation]->width >= h_span && player.sprites[player.animation]->height >= v_span) {
-				return true;
-			}
-			else if (birds[i].sprite->width >= h_span && birds[i].sprite->height >= v_span) {
-				return true;
-			}
-
-		}
 
 	return false;
 }

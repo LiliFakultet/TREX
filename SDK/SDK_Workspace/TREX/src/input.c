@@ -4,6 +4,7 @@
 #include "xparameters.h"
 #include "input.h"
 #include "player.h"
+#include "config.h"
 
 Xuint32 get_key() {
 	return XIo_In32(XPAR_MY_PERIPHERAL_0_BASEADDR);
@@ -31,8 +32,16 @@ void handle_input() {
     }
 
     if (jumping) {
-        if (player.y > DISPLAY_HEIGHT / 2 - 82) {
-            player.y -= 5;
+        if (player.y > GROUND_LEVEL - JUMP_HEIGHT) {
+        	if (player.y > GROUND_LEVEL - JUMP_THRESHOLD) {
+        		player.y -= JUMP_STEP;
+        	}
+        	else if (get_key() == UP_JOY) {
+        		player.y -= JUMP_STEP;
+        	}
+        	else {
+        		jumping = false;
+        	}
         }
         else {
             jumping = false;
@@ -40,8 +49,8 @@ void handle_input() {
     }
 
     if (!jumping) {
-        if (player.y < DISPLAY_HEIGHT / 2) {
-            player.y += 5;
+        if (player.y < GROUND_LEVEL) {
+            player.y += JUMP_STEP;
         }
         else if (player.state == PLAYER_STATE_JUMPING) {
             player.state = PLAYER_STATE_RUNNING;

@@ -1,9 +1,9 @@
-16:17:10 **** Auto Build of configuration Release for project TREX ****
+16:50:30 **** Auto Build of configuration Release for project TREX ****
 make all 
-'Building file: ../src/collision.c'
+'Building file: ../src/vga.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/collision.d" -MT"src/collision.d" -o "src/collision.o" "../src/collision.c"
-'Finished building: ../src/collision.c'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/vga.d" -MT"src/vga.d" -o "src/vga.o" "../src/vga.c"
+'Finished building: ../src/vga.c'
 ' '
 'Building target: TREX.elf'
 'Invoking: MicroBlaze gcc linker'
@@ -13,7 +13,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18702	   1500	   2550	  22752	   58e0	TREX.elf
+  18774	   1500	   2550	  22824	   5928	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -30,5 +30,5 @@ elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
 
-16:17:12 Build Finished (took 1s.274ms)
+16:50:31 Build Finished (took 1s.270ms)
 
