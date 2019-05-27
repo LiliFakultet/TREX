@@ -1,6 +1,6 @@
 #pragma once
 
-#define ANIMATION_DELAY 10
+#define ANIMATION_DELAY 4
 #define ENEMY_DELAY 4
 #define SPAWN_DELAY ((ENEMY_DELAY) * (20))
 #define PLAYER_DELAY 3
