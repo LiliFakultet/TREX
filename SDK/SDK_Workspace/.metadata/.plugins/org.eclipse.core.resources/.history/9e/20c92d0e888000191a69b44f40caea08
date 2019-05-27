@@ -17,7 +17,6 @@ struct Cactus {
 };
 
 extern Cactus cacti[MAX_CACTUS_COUNT];
-extern int cactus_count;
 
 void init_cacti(void);
 void move_cacti(void);

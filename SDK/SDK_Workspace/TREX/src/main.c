@@ -115,7 +115,7 @@ void vga_interrupt_handler(void *arg) {
     clear_birds();
 
     if (ticks % SPAWN_DELAY == 0) {
-    	if (rand() % 4 == 0) {
+    	if (rand() % (4 * cactus_count) == 0) {
         	add_cactus();
     	}
     	else if (score > 200 && rand() % 10 == 0) {

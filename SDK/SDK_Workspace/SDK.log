@@ -403,3 +403,13 @@ Failed to Scan JTAG Chain
 12:05:38.925 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
 12:08:29.464 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
 12:10:18.860 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:37:44.667 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+15:49:06.494 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+15:49:55.473 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+15:50:27.848 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+15:51:21.321 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+15:52:11.300 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+15:52:49.619 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+16:02:49.849 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+16:07:36.780 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+16:11:19.749 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -1,4 +1,4 @@
-15:52:36 **** Build of configuration Release for project TREX ****
+16:07:21 **** Build of configuration Release for project TREX ****
 make all 
 'Building file: ../src/bird.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -53,7 +53,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-e
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18134	   1500	   2558	  22192	   56b0	TREX.elf
+  18146	   1500	   2556	  22202	   56ba	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -70,5 +70,5 @@ elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
 
-15:52:39 Build Finished (took 2s.573ms)
+16:07:24 Build Finished (took 2s.573ms)
 

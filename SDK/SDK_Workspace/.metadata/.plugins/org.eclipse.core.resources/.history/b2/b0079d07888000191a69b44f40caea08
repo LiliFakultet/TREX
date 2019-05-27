@@ -2,7 +2,7 @@
 #include "cactus.h"
 
 Cactus cacti[MAX_CACTUS_COUNT];
-int cactus_count;
+static int cactus_count;
 
 static const uint32_t cactus0[] = {
 	0xFFFFFFFF, 0xF00000FF, 0xFFFFFFFF,
