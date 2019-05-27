@@ -15,12 +15,14 @@ volatile static bool request_reset = false;
 volatile static int ticks = 0;
 volatile static int score = 0;
 volatile static int high_score = 0;
+volatile bool cheat_mode = false;
 static char score_text[14] = "         00000";
 
 static void reset() {
-    show_player();
+	int stop_time;
     show_cacti();
     show_birds();
+    show_player();
 	game_running = false;
 
 	if (high_score > 0) {
@@ -34,6 +36,11 @@ static void reset() {
 	}
 
 	print_string(score_text, 14);
+
+	stop_time = ticks + 60;
+	while (ticks != stop_time) {
+
+	}
 
     while (get_key() != NO_INPUT) {
 
@@ -51,10 +58,10 @@ static void reset() {
     clear_cacti();
     clear_birds();
 
-    init_player(10, 240);
-    player.state = PLAYER_STATE_RUNNING;
     init_cacti();
     init_birds();
+    init_player(10, 240);
+    player.state = PLAYER_STATE_RUNNING;
 
     ticks = 0;
     game_running = true;
@@ -67,6 +74,21 @@ void vga_interrupt_handler(void *arg) {
 
     if (!game_running) {
         return;
+    }
+
+    if (get_key() == LEFT_JOY) {
+    	cheat_mode = true;
+
+		set_cursor(4500);
+    	print_string("NO COLLISIONS", 13);
+    	set_cursor(4713);
+    }
+    else if (get_key() == RIGHT_JOY) {
+    	cheat_mode = false;
+
+		set_cursor(4500);
+    	print_string("             ", 13);
+    	set_cursor(4713);
     }
 
     score = ticks / 20;
@@ -119,7 +141,7 @@ void vga_interrupt_handler(void *arg) {
         animate_birds();
     }
 
-    if (check_collisions()) {
+    if (check_collisions() && !cheat_mode) {
     	player.state = PLAYER_STATE_DEAD;
     	animate_player();
     	request_reset = true;
@@ -130,18 +152,24 @@ void vga_interrupt_handler(void *arg) {
     	set_cursor(4713);
     }
 
-    show_player();
     show_cacti();
     show_birds();
+    show_player();
 }
 
 int main() {
+	int i;
+
     init_platform();
     init_vga();
 	init_vga_interrupt(vga_interrupt_handler);
-    init_player(10, 240);
+    init_player(10, GROUND_LEVEL);
     init_cacti();
     init_birds();
+
+    for (i = 0; i < 80; i++) {
+    	PUT_TO_FSL(GROUND_LEVEL * DISPLAY_WIDTH + i, 0x00000000);
+    }
 
     request_reset = true;
 

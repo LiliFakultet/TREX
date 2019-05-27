@@ -13,7 +13,7 @@ Xuint32 get_key() {
 void handle_input() {
     static bool jumping = false;
 
-    if (get_key() == UP_JOY && player.y == 240) {
+    if (get_key() == UP_JOY && player.y == GROUND_LEVEL) {
         jumping = true;
         player.state = PLAYER_STATE_JUMPING;
     }
@@ -23,7 +23,7 @@ void handle_input() {
         jumping = false;
     }
     else {
-        if (player.y == 240) {
+        if (player.y == GROUND_LEVEL) {
             player.state = PLAYER_STATE_RUNNING;
         }
         else {
