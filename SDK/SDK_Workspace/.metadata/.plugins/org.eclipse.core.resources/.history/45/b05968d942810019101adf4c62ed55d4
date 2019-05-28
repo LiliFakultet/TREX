@@ -1,0 +1,36 @@
+#include <stdlib.h>
+#include "cloud.h"
+
+Cloud clouds[MAX_CLOUD_COUNT];
+int cloud_count;
+
+static const uint32_t cloud[] = { 0x00000000 };
+
+static Sprite cloud_sprite = { cloud, 0, 0 };
+
+void init_clouds() {
+	int i;
+
+	for (i = 0; i < MAX_CLOUD_COUNT; i++) {
+		clouds[i].active = false;
+	}
+
+	cloud_count = 0;
+}
+
+void move_clouds() {
+	int i;
+	for (i = 0; i < MAX_CACTUS_COUNT; i++) {
+		if (!cacti[i].active) {
+			continue;
+		}
+
+		if (cacti[i].x > 0) {
+			--(cacti[i].x);
+		}
+		else {
+			cacti[i].active = false;
+			--cloud_count;
+		}
+	}
+}

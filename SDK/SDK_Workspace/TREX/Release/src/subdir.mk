@@ -6,7 +6,9 @@
 C_SRCS += \
 ../src/bird.c \
 ../src/cactus.c \
+../src/cloud.c \
 ../src/collision.c \
+../src/ground.c \
 ../src/input.c \
 ../src/main.c \
 ../src/platform.c \
@@ -20,7 +22,9 @@ LD_SRCS += \
 OBJS += \
 ./src/bird.o \
 ./src/cactus.o \
+./src/cloud.o \
 ./src/collision.o \
+./src/ground.o \
 ./src/input.o \
 ./src/main.o \
 ./src/platform.o \
@@ -31,7 +35,9 @@ OBJS += \
 C_DEPS += \
 ./src/bird.d \
 ./src/cactus.d \
+./src/cloud.d \
 ./src/collision.d \
+./src/ground.d \
 ./src/input.d \
 ./src/main.d \
 ./src/platform.d \

@@ -1,6 +1,6 @@
-13:44:08 **** Auto Build of project Space_invaders_bsp ****
+15:40:08 **** Auto Build of project Space_invaders_bsp ****
 make -k all 
 'Finished building libraries'
 
-13:44:08 Build Finished (took 129ms)
+15:40:09 Build Finished (took 70ms)
 

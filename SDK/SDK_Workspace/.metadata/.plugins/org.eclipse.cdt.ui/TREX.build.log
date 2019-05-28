@@ -1,19 +1,19 @@
-13:50:25 **** Auto Build of configuration Release for project TREX ****
+15:45:16 **** Auto Build of configuration Release for project TREX ****
 make all 
-'Building file: ../src/bird.c'
+'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/bird.d" -MT"src/bird.d" -o "src/bird.o" "../src/bird.c"
-'Finished building: ../src/bird.c'
+mb-gcc -Wall -O2 -c -fmessage-length=0 -I../../TREX_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
 ' '
 'Building target: TREX.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/collision.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TREX_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -o "TREX.elf"  ./src/bird.o ./src/cactus.o ./src/cloud.o ./src/collision.o ./src/ground.o ./src/input.o ./src/main.o ./src/platform.o ./src/player.o ./src/sprite.o ./src/vga.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: TREX.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size TREX.elf  |tee "TREX.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  18526	   1504	   2554	  22584	   5838	TREX.elf
+  19770	   1516	   2634	  23920	   5d70	TREX.elf
 'Finished building: TREX.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -30,5 +30,5 @@ elfcheck passed.
 'Finished building: TREX.elf.elfcheck'
 ' '
 
-13:50:27 Build Finished (took 1s.327ms)
+15:45:17 Build Finished (took 1s.325ms)
 
