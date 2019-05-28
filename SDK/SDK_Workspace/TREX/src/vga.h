@@ -16,8 +16,12 @@ void init_vga(void);
 void init_vga_interrupt(void (*irq_handler)(void *));
 
 void clear_text_screen(void);
-void print_string(const char *string, int length);
-void set_cursor(int position);
+void reset_score_text();
+void print_score(int score);
+void print_high_score(int high_score);
+void print_game_over();
+void print_cheat_mode();
+void clear_cheat_mode();
 
 void clear_graphics_screen(void);
 void night_mode(void);

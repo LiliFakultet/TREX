@@ -15,27 +15,18 @@ volatile static bool request_reset = false;
 volatile static int ticks = 0;
 volatile static int score = 0;
 volatile static int high_score = 0;
+volatile static int enemy_delay = INITIAL_ENEMY_DELAY;
 volatile bool cheat_mode = false;
-static char score_text[14] = "         00000";
 
 static void reset() {
 	int stop_time;
+
     show_cacti();
     show_birds();
     show_player();
 	game_running = false;
 
-	if (high_score > 0) {
-		score_text[7] = '0' + high_score % 10;
-		score_text[6] = '0' + high_score / 10  % 10;
-		score_text[5] = '0' + high_score / 100 % 10;
-		score_text[4] = '0' + high_score / 1000 % 10;
-		score_text[3] = '0' + high_score / 10000 % 10;
-		score_text[1] = 'I';
-		score_text[0] = 'H';
-	}
-
-	print_string(score_text, 14);
+	print_high_score(high_score);
 
 	stop_time = ticks + 60;
 	while (ticks != stop_time) {
@@ -60,11 +51,46 @@ static void reset() {
 
     init_cacti();
     init_birds();
-    init_player(10, 240);
+    init_player(10, GROUND_LEVEL);
     player.state = PLAYER_STATE_RUNNING;
 
     ticks = 0;
+    score = 0;
+    enemy_delay = 0;
     game_running = true;
+}
+
+static void update_score() {
+	if (score < NORMAL_SPEED_THRESHOLD) {
+		if (ticks % LOW_SPEED_SCORE_DIVISOR == 0) {
+			++score;
+		}
+		enemy_delay = LOW_SPEED;
+	}
+	else if (score < HIGH_SPEED_THRESHOLD) {
+		if (ticks % NORMAL_SPEED_SCORE_DIVISOR == 0) {
+			++score;
+		}
+		enemy_delay = NORMAL_SPEED;
+	}
+	else if (score < INSANE_SPEED_THRESHOLD) {
+		if (ticks % HIGH_SPEED_SCORE_DIVISOR == 0) {
+			++score;
+		}
+		enemy_delay = HIGH_SPEED;
+	}
+	else {
+		if (ticks % INSANE_SPEED_SCORE_DIVISOR == 0) {
+			++score;
+		}
+		enemy_delay = INSANE_SPEED;
+	}
+
+	if (score > high_score) {
+		high_score = score;
+	}
+
+	print_score(score);
 }
 
 void vga_interrupt_handler(void *arg) {
@@ -78,22 +104,11 @@ void vga_interrupt_handler(void *arg) {
 
     if (get_key() == LEFT_JOY) {
     	cheat_mode = true;
-
-		set_cursor(4500);
-    	print_string("NO COLLISIONS", 13);
-    	set_cursor(4713);
+		print_cheat_mode();
     }
     else if (get_key() == RIGHT_JOY) {
     	cheat_mode = false;
-
-		set_cursor(4500);
-    	print_string("             ", 13);
-    	set_cursor(4713);
-    }
-
-    score = ticks / 20;
-    if (score > high_score) {
-    	high_score = score;
+		clear_cheat_mode();
     }
 
     if (score % 1000 > 500) {
@@ -103,12 +118,7 @@ void vga_interrupt_handler(void *arg) {
     	day_mode();
     }
 
-    score_text[13] = '0' + score % 10;
-    score_text[12] = '0' + score / 10  % 10;
-    score_text[11] = '0' + score / 100 % 10;
-    score_text[10] = '0' + score / 1000 % 10;
-    score_text[9]  = '0' + score / 10000 % 10;
-	print_string(score_text, 14);
+    update_score();
 
     clear_player();
     clear_cacti();
@@ -118,7 +128,7 @@ void vga_interrupt_handler(void *arg) {
     	if (rand() % (4 * cactus_count) == 0) {
         	add_cactus();
     	}
-    	else if (score > 200 && rand() % 10 == 0) {
+    	else if (score > 200 && rand() % 8 == 0) {
         	add_bird();
     	}
     }
@@ -127,7 +137,7 @@ void vga_interrupt_handler(void *arg) {
 	    handle_input();
 	}
 
-    if (ticks % ENEMY_DELAY == 0) {
+    if (ticks % enemy_delay == 0) {
         move_cacti();
     	move_birds();
     }
@@ -146,9 +156,7 @@ void vga_interrupt_handler(void *arg) {
     	request_reset = true;
     	game_running = false;
 
-    	set_cursor(7180);
-    	print_string("GAME OVER", 9);
-    	set_cursor(4713);
+    	print_game_over();
     }
 
     show_cacti();
@@ -165,6 +173,10 @@ int main() {
     init_player(10, GROUND_LEVEL);
     init_cacti();
     init_birds();
+
+    score = 0;
+    high_score = 0;
+    reset_score_text();
 
     for (i = 0; i < 80; i++) {
     	PUT_TO_FSL(GROUND_LEVEL * DISPLAY_WIDTH + i, 0x00000000);

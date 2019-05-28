@@ -12,7 +12,7 @@ src/vga.d: ../src/vga.c ../src/vga.h \
  ../../TREX_bsp/microblaze_0/include/xil_printf.h \
  ../../TREX_bsp/microblaze_0/include/xparameters.h \
  ../../TREX_bsp/microblaze_0/include/xio.h \
- ../../TREX_bsp/microblaze_0/include/xil_io.h
+ ../../TREX_bsp/microblaze_0/include/xil_io.h ../src/config.h
 
 ../src/vga.h:
 
@@ -43,3 +43,5 @@ src/vga.d: ../src/vga.c ../src/vga.h \
 ../../TREX_bsp/microblaze_0/include/xio.h:
 
 ../../TREX_bsp/microblaze_0/include/xil_io.h:
+
+../src/config.h:

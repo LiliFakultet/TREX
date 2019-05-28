@@ -1,6 +1,6 @@
-11:43:13 **** Incremental Build of configuration Debug for project VGAtest ****
+12:37:50 **** Auto Build of configuration Debug for project VGAtest ****
 make all 
 make: Ništa za napraviti za `all'.
 
-11:43:13 Build Finished (took 121ms)
+12:37:50 Build Finished (took 123ms)
 

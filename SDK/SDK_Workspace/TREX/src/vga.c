@@ -4,14 +4,27 @@
 #include "xio.h"
 #include "xil_io.h"
 #include "fsl.h"
+#include "config.h"
 
 #define GRAPHICS_MEM_OFF 0x2000000
 #define TEXT_MEM_OFF 0x1000000
 
 static XIntc xintc;
 static Xuint32 cursor_position;
+static char score_text[14] = "         00000";
 
 #define VGA_PERIPH_MEM_mWriteMemory(Address, Data) Xil_Out32((Address), (Xuint32)(Data))
+
+static void set_cursor(int position) {
+    cursor_position = position;
+}
+
+static void print_string(const char *string, int length) {
+	int i;
+	for (i = 0; i < length; i++) {
+		VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + TEXT_MEM_OFF + cursor_position + 4 * i, (string[i] - 0x40));
+	}
+}
 
 void night_mode(void) {
 	VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x10, 0xDDDDDD);	// Main color
@@ -78,13 +91,56 @@ void clear_graphics_screen(void) {
 	}
 }
 
-void set_cursor(int position) {
-    cursor_position = position;
+void print_score(int score) {
+	int i;
+
+	for (i = 0; i < 5; i++) {
+		score_text[13 - i] = '0' + score % 10;
+		score /= 10;
+	}
+
+	set_cursor(SCORE_LOCATION);
+	print_string(score_text, 14);
 }
 
-void print_string(const char *string, int length) {
+void print_high_score(int high_score) {
 	int i;
-	for (i = 0; i < length; i++) {
-		VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + TEXT_MEM_OFF + cursor_position + 4 * i, (string[i] - 0x40));
+
+	if (high_score == 0) {
+		return;
 	}
+
+	for (i = 0; i < 5; i++) {
+		score_text[7 - i] = '0' + high_score % 10;
+		high_score /= 10;
+	}
+
+	score_text[0] = 'H';
+	score_text[1] = 'I';
+
+	set_cursor(SCORE_LOCATION);
+	print_string(score_text, 14);
+}
+
+void reset_score_text() {
+	int i;
+	for (i = 0; i < 14; i++) {
+		score_text[i] = ' ';
+	}
+}
+
+void print_game_over() {
+	set_cursor(GAME_OVER_LOCATION);
+	print_string("GAME OVER", 9);
+}
+
+
+void print_cheat_mode() {
+	set_cursor(CHEAT_MODE_LOCATION);
+	print_string("NO COLLISIONS", 13);
+}
+
+void clear_cheat_mode() {
+	set_cursor(CHEAT_MODE_LOCATION);
+	print_string("             ", 13);
 }
