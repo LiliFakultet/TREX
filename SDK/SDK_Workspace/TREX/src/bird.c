@@ -90,7 +90,7 @@ void add_bird(void) {
 		}
 	}
 
-	height = 240 - 24 * (rand() % 3) - 4;
+	height = 240 - 16 * (rand() % 3) - 4;
 
 	birds[available_index].active = true;
 	birds[available_index].sprite = &bird_sprites[0];

@@ -466,3 +466,5 @@ Failed to Scan JTAG Chain
 15:37:36.661 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
 15:40:07.878 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
 15:46:03.953 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:24:39.843 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Downloads/TREX-master/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+16:25:18.741 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

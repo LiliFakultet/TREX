@@ -20,8 +20,8 @@ bool check_collisions(void) {
 
 		if (player.x < cacti[i].x + cactus_width
 			&& player.x + player_width > cacti[i].x
-			&& player.y < cacti[i].y + cactus_height
-			&& player.y + player_height > cacti[i].y) {
+			&& player.y > cacti[i].y - cactus_height
+			&& player.y - player_height < cacti[i].y) {
 
 			return true;
 		}
@@ -37,8 +37,8 @@ bool check_collisions(void) {
 
 		if (player.x < birds[i].x + bird_width
 			&& player.x + player_width > birds[i].x
-			&& player.y < birds[i].y + bird_height
-			&& player.y + player_height > birds[i].y) {
+			&& player.y > birds[i].y - bird_height
+			&& player.y - player_height < birds[i].y) {
 
 			return true;
 		}

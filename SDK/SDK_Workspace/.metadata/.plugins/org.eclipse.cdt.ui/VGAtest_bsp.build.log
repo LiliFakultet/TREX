@@ -1,6 +1,6 @@
-15:40:09 **** Auto Build of project VGAtest_bsp ****
+16:24:41 **** Auto Build of project VGAtest_bsp ****
 make -k all 
 'Finished building libraries'
 
-15:40:09 Build Finished (took 72ms)
+16:24:41 Build Finished (took 72ms)
 

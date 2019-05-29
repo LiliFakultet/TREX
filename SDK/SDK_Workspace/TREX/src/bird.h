@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include "sprite.h"
 
-#define MAX_BIRD_COUNT 2
+#define MAX_BIRD_COUNT 3
 #define BIRD_ANIMATION_COUNT 2
 
 typedef struct Bird Bird;

@@ -137,7 +137,7 @@ void vga_interrupt_handler(void *arg) {
     	if (rand() % (4 * cactus_count) == 0) {
         	add_cactus();
     	}
-    	else if (score > 200 && rand() % 8 == 0) {
+    	else  if (rand() % 8 == 0) {
         	add_bird();
     	}
     }
