@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include "sprite.h"
 
-#define CACTUS_VARIANT_COUNT 2
+#define CACTUS_VARIANT_COUNT 4
 #define MAX_CACTUS_COUNT 8
 
 typedef struct Cactus Cactus;

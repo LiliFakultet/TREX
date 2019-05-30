@@ -1,6 +1,6 @@
-16:24:40 **** Auto Build of project TREX_bsp ****
+11:47:51 **** Auto Build of project TREX_bsp ****
 make -k all 
 'Finished building libraries'
 
-16:24:40 Build Finished (took 157ms)
+11:47:51 Build Finished (took 135ms)
 

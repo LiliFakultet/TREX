@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\Users\student\Downloads\TREX-master\TREX-master\SDK\SDK_Export\hw\system.bit" key="TREX_hw_platform-bitFile"/>
-	<item value="C:\Users\student\Downloads\TREX-master\TREX-master\SDK\SDK_Export\hw\system_bd.bmm" key="TREX_hw_platform-bmmFile"/>
-	<item value="C:\Users\student\Downloads\TREX-master\TREX\TREX\SDK\SDK_Workspace\TREX\Release\TREX.elf" key="TREX_hw_platform-microblaze_0-initElf"/>
+	<item value="D:\TREX\TREX-new\TREX\SDK\SDK_Export\hw\system_bd.bmm" key="TREX_hw_platform-bmmFile"/>
+	<item value="D:\TREX\TREX-new\TREX\SDK\SDK_Export\hw\system.bit" key="TREX_hw_platform-bitFile"/>
+	<item value="D:\TREX\TREX-new\TREX\SDK\SDK_Workspace\TREX\Release\TREX.elf" key="TREX_hw_platform-microblaze_0-initElf"/>
 </section>

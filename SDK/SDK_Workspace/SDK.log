@@ -468,3 +468,48 @@ Failed to Scan JTAG Chain
 15:46:03.953 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 16:24:39.843 INFO  - FPGA configured successfully with bitstream "C:/Users/student/Downloads/TREX-master/TREX/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
 16:25:18.741 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:56:47.191 INFO  - Project TREX_hw_platform's source hardware specification located at D:\TREX\TREX\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+10:57:36.532 INFO  - Copied contents of D:\TREX\TREX\SDK\SDK_Export\hw\system.xml into \TREX_hw_platform\system.xml. 
+10:57:36.573 INFO  - Copied contents of D:\TREX\TREX\SDK\SDK_Export\hw\system.bit into \TREX_hw_platform\system.bit. 
+10:57:36.585 INFO  - Copied contents of D:\TREX\TREX\SDK\SDK_Export\hw\system_bd.bmm into \TREX_hw_platform\system_bd.bmm. 
+10:57:36.845 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+10:57:40.183 INFO  - Updating hardware inferred compiler options for Space_invaders. 
+10:57:40.975 INFO  - Updating hardware inferred compiler options for TREX. 
+10:57:41.781 INFO  - Updating hardware inferred compiler options for VGAtest. 
+10:57:41.797 INFO  - Clearing existing target manager status. 
+10:57:44.054 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+10:58:48.292 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+10:59:51.664 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:12:47.986 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:13:26.877 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:13:41.550 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:14:35.877 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:15:40.191 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:15:53.676 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:16:11.189 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:16:25.559 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:16:47.060 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:17:36.969 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:18:47.001 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:19:00.567 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:19:15.167 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:19:26.823 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:19:47.221 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:22:17.038 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:22:37.546 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:23:03.172 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:23:21.326 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:23:46.844 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:24:04.455 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:25:13.873 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:25:42.099 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:26:20.199 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:28:37.904 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:30:12.420 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:30:41.023 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:31:14.634 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:34:51.462 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:40:16.247 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:47:50.347 INFO  - FPGA configured successfully with bitstream "D:/TREX/TREX-new/TREX/SDK/SDK_Workspace/TREX_hw_platform/download.bit" 
+11:49:10.783 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

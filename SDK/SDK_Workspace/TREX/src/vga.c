@@ -60,8 +60,6 @@ void init_vga(void) {
 
 	clear_text_screen();
 	clear_graphics_screen();
-
-	set_cursor(4713);
 }
 
 void init_vga_interrupt(void (*irq_handler)(void *)) {
@@ -82,6 +80,13 @@ void clear_text_screen(void) {
     for (i = 0; i < 4800; i++) {
         VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + TEXT_MEM_OFF + 4 * i, 0x20);
     }
+
+    set_cursor(11550);
+	print_string("UNABLE TO CONNECT TO THE INTERNET", 33);
+	set_cursor(13470);
+	print_string("GOOGLE CHROME CAN'T DISPLAY THE WEBPAGE BECAUSE YOUR COMPUTER", 61);
+	set_cursor(14430);
+	print_string("ISN'T CONNECTED TO THE INTERNET.", 32);
 }
 
 void clear_graphics_screen(void) {
