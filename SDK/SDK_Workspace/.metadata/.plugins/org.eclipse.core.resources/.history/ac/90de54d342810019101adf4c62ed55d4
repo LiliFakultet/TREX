@@ -1,9 +1,0 @@
-#include <stdlib.h>
-#include "cloud.h"
-
-Cloud clouds[MAX_CLOUD_COUNT];
-int cloud_count;
-
-static const uint32_t cloud[] = { 0x00000000 };
-
-static Sprite cloud_sprite = { cloud, 0, 0 };

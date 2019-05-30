@@ -1,4 +1,0 @@
-#include <stdlib.h>
-#include "cloud.h"
-
-static const uint32_t cloud[] = { 0x00000000};'

@@ -1,4 +1,0 @@
-#include <stdint.h>
-#include "bird.h"
-
-const uint32_t bird1_sprite[] =

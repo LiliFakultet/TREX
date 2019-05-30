@@ -1,7 +1,0 @@
-#pragma once
-
-#include "sprite.h"
-
-#define GROUND_VARIANT_COUNT 4
-
-const Sprite ground_sprites[GROUND_VARIANT_COUNT];
