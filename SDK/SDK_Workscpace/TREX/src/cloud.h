@@ -8,15 +8,16 @@
 typedef struct Cloud Cloud;
 
 struct Cloud {
-	int x;
-	int y;
-	bool active;
-	Sprite *sprite;
+    int x;
+    int y;
+    bool active;
+    Sprite *sprite;
 };
 
 extern Cloud clouds[MAX_CLOUD_COUNT];
 extern int cloud_count;
 
+// see bird.h
 void init_clouds(void);
 void move_clouds(void);
 void add_cloud(void);

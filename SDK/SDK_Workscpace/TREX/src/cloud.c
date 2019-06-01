@@ -1,8 +1,10 @@
-#include <stdlib.h>
 #include "cloud.h"
+#include <stdlib.h>
 
 Cloud clouds[MAX_CLOUD_COUNT];
 int cloud_count;
+
+// clang-format off
 
 static const uint32_t cloud[] = {
 	0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
@@ -23,75 +25,78 @@ static const uint32_t cloud[] = {
 	0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF
 };
 
-static Sprite cloud_sprite = { cloud, 4, 16 };
+// clang-format on
+
+static Sprite cloud_sprite = {cloud, 4, 16};
 
 void init_clouds() {
-	int i;
+    int i;
 
-	for (i = 0; i < MAX_CLOUD_COUNT; i++) {
-		clouds[i].active = false;
-	}
+    for (i = 0; i < MAX_CLOUD_COUNT; i++) {
+        clouds[i].active = false;
+    }
 
-	cloud_count = 0;
+    cloud_count = 0;
 }
 
 void move_clouds() {
-	int i;
-	for (i = 0; i < MAX_CLOUD_COUNT; i++) {
-		if (!clouds[i].active) {
-			continue;
-		}
+    int i;
+    for (i = 0; i < MAX_CLOUD_COUNT; i++) {
+        if (!clouds[i].active) {
+            continue;
+        }
 
-		if (clouds[i].x > 0) {
-			--(clouds[i].x);
-		}
-		else {
-			clouds[i].active = false;
-			--cloud_count;
-		}
-	}
+        if (clouds[i].x > 0) {
+            --(clouds[i].x);
+        }
+        else {
+            clouds[i].active = false;
+            --cloud_count;
+        }
+    }
 }
 
 void add_cloud(void) {
-	int i;
-	int available_index = -1;
-	int height;
+    int i;
+    int available_index = -1;
+    int height;
 
-	if (cloud_count == MAX_CLOUD_COUNT) {
-		return;
-	}
+    if (cloud_count == MAX_CLOUD_COUNT) {
+        return;
+    }
 
-	for (i = 0; i < MAX_CLOUD_COUNT; i++) {
-		if (!clouds[i].active) {
-			available_index = i;
-			break;
-		}
-	}
+    for (i = 0; i < MAX_CLOUD_COUNT; i++) {
+        if (!clouds[i].active) {
+            available_index = i;
+            break;
+        }
+    }
 
-	height = 240 - 24 * (rand() % 3) - 128;
+    // Select one of the three possible heights at which a cloud can appear
+    height = 240 - 24 * (rand() % 3) - 128;
 
-	clouds[available_index].active = true;
-	clouds[available_index].sprite = &cloud_sprite;
-	clouds[available_index].x = 79 - clouds[available_index].sprite->width;
-	clouds[available_index].y = height;
+    clouds[available_index].active = true;
+    clouds[available_index].sprite = &cloud_sprite;
+    clouds[available_index].x = 79 - clouds[available_index].sprite->width;
+    clouds[available_index].y = height;
 
-	++cloud_count;
+    ++cloud_count;
 }
 
 void show_clouds(void) {
-	int i;
-	for (i = 0; i < MAX_CLOUD_COUNT; i++) {
-		if (clouds[i].active) {
-			show_sprite(clouds[i].sprite, clouds[i].x, clouds[i].y);
-		}
-	}
+    int i;
+    for (i = 0; i < MAX_CLOUD_COUNT; i++) {
+        if (clouds[i].active) {
+            show_sprite(clouds[i].sprite, clouds[i].x, clouds[i].y);
+        }
+    }
 }
 
 void clear_clouds(void) {
-	int i;
-	for (i = 0; i < MAX_CLOUD_COUNT; i++) {
-		if (clouds[i].active) {
-			clear_sprite(clouds[i].sprite, clouds[i].x, clouds[i].y);
-		}
-	}
+    int i;
+    for (i = 0; i < MAX_CLOUD_COUNT; i++) {
+        if (clouds[i].active) {
+            clear_sprite(clouds[i].sprite, clouds[i].x, clouds[i].y);
+        }
+    }
 }

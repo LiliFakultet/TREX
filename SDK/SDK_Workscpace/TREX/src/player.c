@@ -1,6 +1,7 @@
-#include <stdint.h>
 #include "player.h"
+#include <stdint.h>
 
+// clang-format off
 static const uint32_t player_idle[] = {
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
     0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
@@ -186,42 +187,19 @@ static const uint32_t player_ducking2[] = {
     0xFFFFFFFF, 0xFFFFFF0F, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF,
     0xFFFFFFFF, 0xFFFFFF00, 0x0FFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF
 };
+// clang-format on
 
-static Sprite ducking1 = {
-    player_ducking1,
-    5,
-    20
-};
+static Sprite ducking1 = {player_ducking1, 5, 20};
 
-static Sprite ducking2 = {
-    player_ducking2,
-    5,
-    20
-};
+static Sprite ducking2 = {player_ducking2, 5, 20};
 
-static Sprite idle = {
-    player_idle,
-    4,
-    32
-};
+static Sprite idle = {player_idle, 4, 32};
 
-static Sprite dead = {
-    player_dead,
-    4,
-    32
-};
+static Sprite dead = {player_dead, 4, 32};
 
-static Sprite running1 = {
-    player_running1,
-    4,
-    32
-};
+static Sprite running1 = {player_running1, 4, 32};
 
-static Sprite running2 = {
-    player_running2,
-    4,
-    32
-};
+static Sprite running2 = {player_running2, 4, 32};
 
 Player player;
 
@@ -250,9 +228,7 @@ void clear_player() {
 void animate_player() {
     switch (player.state) {
     case PLAYER_STATE_IDLE:
-    case PLAYER_STATE_JUMPING:
-        player.animation = PLAYER_ANIMATION_IDLE;
-        break;
+    case PLAYER_STATE_JUMPING: player.animation = PLAYER_ANIMATION_IDLE; break;
 
     case PLAYER_STATE_RUNNING:
         if (player.animation != PLAYER_ANIMATION_RUNNING_1) {
@@ -272,7 +248,6 @@ void animate_player() {
         }
         break;
 
-    case PLAYER_STATE_DEAD:
-        player.animation = PLAYER_ANIMATION_DEAD;
+    case PLAYER_STATE_DEAD: player.animation = PLAYER_ANIMATION_DEAD;
     }
 }
