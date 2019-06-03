@@ -1,0 +1,24 @@
+11:07:31 **** Build of configuration Release for project TREX ****
+make all 
+'Invoking: MicroBlaze Print Size'
+mb-size TREX.elf  |tee "TREX.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21470	   1564	   2644	  25678	   644e	TREX.elf
+'Finished building: TREX.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck TREX.elf -hw ../../trex_clean_hw_platform/system.xml -pe microblaze_0  |tee "TREX.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../trex_clean_hw_platform/system.xml -pe
+microblaze_0 TREX.elf 
+
+ELF file	: TREX.elf
+elfcheck passed.
+'Finished building: TREX.elf.elfcheck'
+' '
+
+11:07:32 Build Finished (took 1s.23ms)
+
